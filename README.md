@@ -38,6 +38,8 @@ Se recomienda visitar [1](#-1-Herramientas-de-Desarrollo) para poder avanzar sin
 
 Para el desarrollo de esta página web se empleó **React** como biblioteca principal para la construcción de la interfaz de usuario, junto con **Vite** como herramienta de desarrollo y compilación. El proyecto utiliza **TypeScript** para garantizar un código más seguro y estructurado, y **TailwindCSS** para la implementación de los estilos y el diseño visual de la aplicación.
 
+Ademas del gestor de paquetes **pnpm**.
+
 La estructura del proyecto se organiza de la siguiente manera:
 
 ```bash
