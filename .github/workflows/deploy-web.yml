@@ -1,0 +1,106 @@
+name: Deploy DBP Web Page
+
+on:
+  push:
+    branches:
+      - main
+      - test
+      - dev
+
+permissions:
+  contents: read
+  deployments: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm run build
+
+      - name: Compilacion Correcta
+        if: github.ref_name == 'dev'
+        run: echo "Compilacion Correcta"
+
+      - name: Upload artifact for Cloudflare Pages
+        if: github.ref_name == 'test'
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-dist
+          path: ./dist
+
+      - uses: actions/configure-pages@v5
+        if: github.ref_name == 'main'
+
+      - uses: actions/upload-pages-artifact@v3
+        if: github.ref_name == 'main'
+        with:
+          path: ./dist
+
+  deploy-cloudflare:
+    if: github.ref_name == 'test'
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: cloudflare-pages
+
+    steps:
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: cloudflare-dist
+          path: ./dist
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+          directory: ./dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: test
+      - name: Add Deployment URL to Summary
+        run: |
+          echo "**Cloudflare Pages Deployment**"
+          echo "Project: ${{ vars.CLOUDFLARE_PROJECT_NAME }}"
+          echo "Branch: test"
+          echo "Environment: Cloudflare Pages"
+          echo ""
+          echo "To preview this deployment, go to: ${{ steps.deploy.outputs.url }}" 
+  deploy-github-pages:
+    if: github.ref_name == 'main'
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
