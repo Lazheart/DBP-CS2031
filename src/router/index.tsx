@@ -23,10 +23,35 @@ const router = createBrowserRouter([
    },
 
   {
+    path: "/DBP-CS2031",
+    element: <HomePage />
+  },
+
+    {
+    path: "/DBP-CS2031/404-not-found",
+    element: <NotFoundPage />
+  },
+
+      {
+    path: "/DBP-CS2031/comming-soon",
+    element: <CommingSoonPage />
+  },
+      {
+    path: "/DBP-CS2031/homepage",
+    element: <HomePage />
+  },
+
+  {
+    path: "/DBP-CS2031/homepage/",
+    element: <HomePage />
+  },
+
+  {
     // Cualquier ruta no mapeada
     path: "*",
-    element: <NotFoundPage />,
+    element: <NotFoundPage />
   },
+
 ])
 
 export default router
