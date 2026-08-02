@@ -83,7 +83,14 @@ jobs:
           directory: ./dist
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: test
-
+      - name: Add Deployment URL to Summary
+        run: |
+          echo "**Cloudflare Pages Deployment**"
+          echo "Project: ${{ vars.CLOUDFLARE_PROJECT_NAME }}"
+          echo "Branch: test"
+          echo "Environment: Cloudflare Pages"
+          echo ""
+          echo "To preview this deployment, go to: ${{ steps.deploy.outputs.url }}" 
   deploy-github-pages:
     if: github.ref_name == 'main'
     needs: build
