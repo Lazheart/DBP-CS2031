@@ -38,13 +38,20 @@ jobs:
       - name: Build
         run: pnpm run build
 
+      - name: Compilacion Correcta
+        if: github.ref_name == 'dev' || github.ref_name == 'test'
+        run: echo "Compilacion Correcta"
+
       - uses: actions/configure-pages@v5
+        if: github.ref_name == 'main'
 
       - uses: actions/upload-pages-artifact@v3
+        if: github.ref_name == 'main'
         with:
           path: ./dist
 
   deploy:
+    if: github.ref_name == 'main'
     needs: build
 
     runs-on: ubuntu-latest
