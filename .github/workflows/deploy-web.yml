@@ -13,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -39,8 +39,15 @@ jobs:
         run: pnpm run build
 
       - name: Compilacion Correcta
-        if: github.ref_name == 'dev' || github.ref_name == 'test'
+        if: github.ref_name == 'dev'
         run: echo "Compilacion Correcta"
+
+      - name: Upload artifact for Cloudflare Pages
+        if: github.ref_name == 'test'
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-dist
+          path: ./dist
 
       - uses: actions/configure-pages@v5
         if: github.ref_name == 'main'
@@ -50,7 +57,33 @@ jobs:
         with:
           path: ./dist
 
-  deploy:
+  deploy-cloudflare:
+    if: github.ref_name == 'test'
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: cloudflare-pages
+
+    steps:
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: cloudflare-dist
+          path: ./dist
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          directory: ./dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: test
+
+  deploy-github-pages:
     if: github.ref_name == 'main'
     needs: build
 
