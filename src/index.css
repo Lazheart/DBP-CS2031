@@ -164,5 +164,41 @@ code {
   }
 }
 
+/* Coming Soon page styling */
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
 
+.coming-soon-img {
+  width: 14rem; /* móviles: w-56 */
+  height: auto;
+  object-fit: contain;
+  animation: float 4s ease-in-out infinite;
+}
 
+@media (min-width: 768px) {
+  .coming-soon-img {
+    width: 18rem; /* tablets: w-72 */
+  }
+}
+
+@media (min-width: 1024px) {
+  .coming-soon-img {
+    width: 26rem; /* escritorio: w-96 a w-[28rem] */
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
