@@ -182,6 +182,14 @@ code {
   animation: float 4s ease-in-out infinite;
 }
 
+.lost-img {
+  width: 16rem; /* móviles: w-56 */
+  height: auto;
+  object-fit: contain;
+  animation: float 4s ease-in-out infinite;
+
+}
+
 @media (min-width: 768px) {
   .coming-soon-img {
     width: 18rem; /* tablets: w-72 */

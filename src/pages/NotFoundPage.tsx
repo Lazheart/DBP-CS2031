@@ -8,12 +8,12 @@ const NotFoundPage = () => {
             <img 
                 src={emiyaLostImg}
                 alt="Emiya perdido buscando el contenido del sitio"
-                className="coming-soon-img w-7 md:w-10 lg:w-10 h-auto object-contain"
+                className="lost-img w-40 md:w-52 lg:w-64 h-auto object-contain"
             />
             <p className="text-xl md:text-2xl font-semibold max-w-xl text-center">
-                La pagina que estas buscando no existe, <b><br /></b>
+                La pagina que estas buscando no existe, <b><br />¡Intenta buscar en otro ruta!</b>
             </p>
-            <Link to="/homepage" className="text-lg md:text-xl font-semibold hover:underline">
+            <Link to="/" className="text-lg md:text-xl font-semibold hover:underline">
                 Ir al inicio
             </Link>
         </div>
