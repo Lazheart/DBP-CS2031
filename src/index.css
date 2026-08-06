@@ -138,4 +138,31 @@ code {
   background: var(--code-bg);
 }
 
+/* Not Found page styling */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 20px;
+  padding: 40px 20px;
+  min-height: 60vh;
+}
+
+.error-code {
+  font-family: var(--heading);
+  font-size: 10rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--accent);
+  letter-spacing: -4px;
+  margin: 0;
+
+  @media (max-width: 1024px) {
+    font-size: 6rem;
+  }
+}
+
+
 
