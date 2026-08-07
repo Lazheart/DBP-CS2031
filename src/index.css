@@ -210,3 +210,212 @@ code {
     transform: translateY(-10px);
   }
 }
+
+/* ═══════════════════════════════════════════════
+   Homebar — Sticky Navigation Bar
+   ═══════════════════════════════════════════════ */
+
+.homebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(24, 25, 31, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homebar--scrolled {
+  background: rgba(18, 19, 24, 0.95);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.homebar__inner {
+  max-width: 1126px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 56px;
+}
+
+/* Brand / Logo */
+.homebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.homebar__brand:hover {
+  opacity: 0.85;
+}
+
+.homebar__logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.homebar__brand-text {
+  font-family: var(--section);
+  font-size: 15px;
+  font-weight: 400;
+  color: #f3f4f6;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* Navigation Links */
+.homebar__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.homebar__link {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: #c9ccd1;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+
+.homebar__link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* CTA Button — Red "Módulos" */
+.homebar__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.homebar__cta:hover {
+  background: #d42020;
+  transform: translateY(-1px);
+}
+
+.homebar__cta:active {
+  transform: translateY(0);
+}
+
+.homebar__cta-arrow {
+  transition: transform 0.2s;
+}
+
+.homebar__cta:hover .homebar__cta-arrow {
+  transform: translateX(3px);
+}
+
+/* Hamburger Button (mobile) */
+.homebar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.homebar__hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #c9ccd1;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.homebar__hamburger--open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.homebar__hamburger--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.homebar__hamburger--open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile Responsive ── */
+@media (max-width: 768px) {
+  .homebar__hamburger {
+    display: flex;
+  }
+
+  .homebar__links {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(18, 19, 24, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 12px 20px 20px;
+    gap: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .homebar__links--open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .homebar__link {
+    width: 100%;
+    padding: 12px 14px;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  .homebar__cta {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+    margin-top: 4px;
+    box-sizing: border-box;
+  }
+}
+
+/* Add top padding to page content to account for fixed navbar */
+.home-page {
+  padding-top: 56px;
+}

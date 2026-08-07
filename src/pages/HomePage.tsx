@@ -1,14 +1,23 @@
-import { Link } from "react-router-dom"
+import { Homebar } from "../components/Homebar.tsx"
+import Footer from "../components/Footer.tsx"
 
 const HomePage = () => {
     return (
-        <div className="home w-full flex flex-col h-screen justify-center items-center gap-10">
-            <h1 className="text-6xl font-bold animate-pulse">Pagina de inicio</h1>
-            <p className="text-2xl font-semibold animate-pulse">Bienvenido a la pagina de inicio</p>
-            <ul className="flex gap-10">
-                <Link to="/comming-soon" className="text-xl font-semibold animate-pulse">Ir a pagina proximamente</Link>
-                <Link to="/not-found" className="text-xl font-semibold animate-pulse">Ir a pagina no encontrada</Link>
-            </ul>
+        <div className="home home-page w-full flex flex-col">
+            <Homebar></Homebar>
+            <div id="hero" className="hero-section">
+                <p>Hero section</p>
+            </div>
+            <div id="about" className="about-website-section">
+                <p>About this website</p>
+            </div>
+            <div id="modules-section" className="modules-section">
+                <p>Modules section</p>
+            </div>
+            <div id="team-section" className="team-section">
+                <p>Team section</p>
+            </div>
+            <Footer></Footer>
         </div>
 
     )
