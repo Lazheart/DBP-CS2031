@@ -61,24 +61,71 @@ const HomePage = () => {
                     
                 </div>
                 <div id="team-section" className="team-section">
-                    <h1>Equipo</h1>
-                    <div className="team-content">
-                        <div>
-                            <img src="" alt="" />
-                            <h2>Salvador Eduardo</h2>
-                            <p>Github/Eduardo-Gv17</p>
-                        </div>
-                        <div>
-                            <img src="" alt="" />
-                            <h2>Romulo</h2>
-                            <p>Github/lazheart</p>
-                        </div>
-                        <div>
-                            <h2>¿Interesado en contribuir?</h2>
-                            <p>Visita nuestro Github</p>
-                        </div>
+                    <p className="team-title">Contribuidores</p>
+                    <p> El equipo que hizo posible este proyecto </p> <br />
+                    <div className="team-grid">
+                        {/* Romulo — Miembro Fundador */}
+                        <a
+                            href="https://github.com/Lazheart"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="team-card"
+                        >
+                            <img
+                                src="https://avatars.githubusercontent.com/u/176245760?v=4"
+                                alt="Romulo"
+                                className="team-card__avatar"
+                            />
+                            <div className="team-card__info">
+                                <h2 className="team-card__name">Romulo</h2>
+                                <p className="team-card__handle">@Lazheart</p>
+                                <span className="team-card__role team-card__role--founder">Miembro Fundador</span>
+                            </div>
+                            <svg className="team-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </a>
+
+                        {/* Salvador — Contribuidor */}
+                        <a
+                            href="https://github.com/Eduardo-Gv17"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="team-card"
+                        >
+                            <img
+                                src="https://avatars.githubusercontent.com/u/216962761?v=4"
+                                alt="Salvador Eduardo"
+                                className="team-card__avatar"
+                            />
+                            <div className="team-card__info">
+                                <h2 className="team-card__name">Salvador</h2>
+                                <p className="team-card__handle">@Eduardo-Gv17</p>
+                                <span className="team-card__role team-card__role--contributor">Contribuidor</span>
+                            </div>
+                            <svg className="team-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                        </a>
+
+                        {/* CTA — Contribuir */}
+                        <a
+                            href="https://github.com/Lazheart/DBP-CS2031"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="team-card team-card--cta"
+                        >
+                            <div className="team-card__cta-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 5V19M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </div>
+                            <div className="team-card__info">
+                                <h2 className="team-card__name">¿Quieres contribuir?</h2>
+                                <p className="team-card__handle">Fork el repo y abre un Pull Request</p>
+                            </div>
+                        </a>
                     </div>
-                     
                 </div>
 
 
