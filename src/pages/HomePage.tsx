@@ -79,7 +79,7 @@ const HomePage = () => {
                             <div className="team-card__info">
                                 <h2 className="team-card__name">Romulo</h2>
                                 <p className="team-card__handle">@Lazheart</p>
-                                <span className="team-card__role team-card__role--founder">Miembro Fundador</span>
+                                <span className="team-card__role team-card__role--founder">Fullstack Developer</span>
                             </div>
                             <svg className="team-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -101,7 +101,7 @@ const HomePage = () => {
                             <div className="team-card__info">
                                 <h2 className="team-card__name">Salvador</h2>
                                 <p className="team-card__handle">@Eduardo-Gv17</p>
-                                <span className="team-card__role team-card__role--contributor">Contribuidor</span>
+                                <span className="team-card__role team-card__role--contributor">Backend Junior Developer</span>
                             </div>
                             <svg className="team-card__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
