@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom"
 import NotFoundPage from "../pages/NotFoundPage"
 import HomePage from "../pages/HomePage"
 import CommingSoonPage from "../pages/CommingSoonPage"
-import GitPage from "../pages/GitPage"
+import GitPage from "../pages/tools/GitPage"
 
 const router = createBrowserRouter(
   [
@@ -16,6 +16,10 @@ const router = createBrowserRouter(
     },
     {
       path: "/tools/git",
+      element: <GitPage />,
+    },
+    {
+      path: "/git",
       element: <GitPage />,
     },
     {

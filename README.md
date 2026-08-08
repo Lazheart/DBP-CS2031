@@ -24,7 +24,7 @@ Con el fin de cubrir los temas se decidio separar en 4 modulos principales los t
     * Axios
     * React Router
     * Local Storage & Session Storage
-4. Github Actions y AWS
+4. Github Actions y Deployment
     * Github Pages
     * Github Actions
     * AWS EC2
