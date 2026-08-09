@@ -8,37 +8,89 @@ const HomePage = () => {
             <Homebar></Homebar>
             <main>
                 <div id="hero" className="hero-section">
-                    <h1>Desarrollo Basado en Plataformas</h1>
-                    <h4>CS2031</h4>
-                    <h5>Aprende Git , Docker ,Springboot ,React y mucho más</h5>
+                    <h1 className="hero-title">
+                        <span className="hero-title-row">Desarrollo</span>
+                        <span className="hero-title-row hero-title-gradient">Basado en</span>
+                        <span className="hero-title-row">Plataformas</span>
+                    </h1>
+                    <p className="hero-description">
+                        Plataforma educativa del curso CS2031, desarrollada por estudiantes de UTEC.
+                        Aprende Git, Docker, Spring Boot, React y AWS a través de módulos progresivos.
+                    </p>
+
+                    <button className="button-primary-orange" onClick={() => { window.location.href = "#modules-section" }}>
+                        Comienza aquí
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                            <path stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M12 5l7 7-7 7"></path>
+                            <path stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M19 12H5"></path>
+                        </svg>
+                    </button>
                 </div>
-                <div id="about" className="about-website-section">
-                    <h1>Sobre esta página</h1>
-                    <div className="about-content">
-                        <p className="align-text-left">
-                            Esta página busca ser una guía para estudiantes y personas
-                            interesadas en el mundo del desarrollo web. Los temas abordados
-                            cubren conceptos fundamentales que permiten comprender mejor las
-                            herramientas y tecnologías utilizadas en el desarrollo web.
+                <div id="about" className="about-section">
+                    <div className="about-header">
+                        <h2 className="about-title">Sobre esta página</h2>
+                        <p className="about-subtitle">
+                            Una iniciativa para guiar, complementar y potenciar el aprendizaje del desarrollo web moderno.
                         </p>
+                    </div>
 
-                        <p className="align-text-left">
-                            Además, el contenido está alineado con los temas tratados en el
-                            curso <br /> <strong>Desarrollo Basado en Plataformas (CS2031)</strong>,
-                            dictado por la <strong>Universidad de Ingeniería y Tecnología (UTEC)</strong>.
-                        </p>
+                    <div className="about-grid">
+                        {/* Card 1: Guía de Aprendizaje */}
+                        <div className="about-card">
+                            <div className="about-card__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                </svg>
+                            </div>
+                            <h3 className="about-card__title">Guía de Aprendizaje</h3>
+                            <p className="about-card__desc">
+                                Una guía de autoaprendizaje para estudiantes y personas interesadas en el mundo del desarrollo web, cubriendo conceptos fundamentales y herramientas modernas.
+                            </p>
+                        </div>
 
-                        <p className="align-text-left">
-                            Esta página no busca reemplazar el curso. Creemos firmemente que
-                            la mejor forma de aprender es asistiendo a clases, participando
-                            activamente y poniendo en práctica los conocimientos adquiridos.
-                        </p>
+                        {/* Card 2: Alineación Académica */}
+                        <div className="about-card">
+                            <div className="about-card__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                                </svg>
+                            </div>
+                            <h3 className="about-card__title">Alineación Académica</h3>
+                            <p className="about-card__desc">
+                                El contenido está alineado con los temas tratados en el curso <strong>Desarrollo Basado en Plataformas (CS2031)</strong> de la <strong>Universidad de Ingeniería y Tecnología (UTEC)</strong>.
+                            </p>
+                        </div>
 
-                        <p className="align-text-left">
-                            Sin embargo, esta plataforma busca ofrecer un espacio donde los
-                            estudiantes puedan repasar los temas tratados en clase, reforzar
-                            sus conocimientos y prepararse para las evaluaciones.
-                        </p>
+                        {/* Card 3: Práctica Activa */}
+                        <div className="about-card">
+                            <div className="about-card__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <polyline points="16 18 22 12 16 6" />
+                                    <polyline points="8 6 2 12 8 18" />
+                                    <line x1="14" y1="4" x2="10" y2="20" />
+                                </svg>
+                            </div>
+                            <h3 className="about-card__title">Práctica Activa</h3>
+                            <p className="about-card__desc">
+                                No busca reemplazar el curso. Creemos firmemente que la mejor forma de aprender es asistiendo a clases, participando activamente y poniendo en práctica los conocimientos.
+                            </p>
+                        </div>
+
+                        {/* Card 4: Espacio de Repaso */}
+                        <div className="about-card">
+                            <div className="about-card__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>
+                            </div>
+                            <h3 className="about-card__title">Refuerzo y Repaso</h3>
+                            <p className="about-card__desc">
+                                Ofrece un espacio donde los estudiantes pueden repasar los temas tratados en clase, reforzar sus conocimientos y prepararse para las evaluaciones de manera autónoma.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div id="modules-section" className="modules-section">
