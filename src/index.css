@@ -419,6 +419,232 @@ code {
   padding-top: 56px;
 }
 
+
+/* ═══════════════════════════════════════════════
+   Modules Section
+   ═══════════════════════════════════════════════ */
+.modules-section {
+  padding: 64px 32px;
+  text-align: left;
+  border-top: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    padding: 48px 20px;
+  }
+}
+
+.modules-layout {
+  display: flex;
+  gap: 48px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.modules-text {
+  flex: 1 1 35%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
+}
+
+.modules-title {
+  font-family: var(--heading);
+  font-size: 56px;
+  line-height: 1.1;
+  color: var(--text-h);
+  margin: 0 0 24px;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
+}
+
+.modules-desc {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.modules-note {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+  opacity: 0.85;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* Grid of 4 cards */
+.modules-grid {
+  flex: 1 1 65%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card item */
+.module-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 24px 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.module-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(239, 68, 68, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Badge (Recomendado, Produccion) */
+.module-card__badge {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #d97706; /* gold/orange */
+  background: rgba(217, 119, 6, 0.1);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  padding: 3px 8px;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.module-card__badge--recommended {
+  color: #ef4444; /* red */
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+/* Card Header */
+.module-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  margin-top: 8px; /* space below potential badge */
+}
+
+/* Large numbers */
+.module-card__number {
+  font-family: var(--sans);
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(239, 68, 68, 0.15); /* red shade matching mockup */
+  letter-spacing: -1px;
+  transition: color 0.3s ease;
+}
+
+.module-card:hover .module-card__number {
+  color: rgba(239, 68, 68, 0.3);
+}
+
+/* Top right icons */
+.module-card__icon {
+  color: var(--text);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Arrow specific styling (always red and distinct) */
+.module-card__icon--arrow {
+  color: #f33f3f;
+  opacity: 1;
+}
+
+.module-card:hover .module-card__icon {
+  opacity: 1;
+  color: #f33f3f;
+  transform: scale(1.1);
+}
+
+.module-card:hover .module-card__icon--arrow {
+  transform: translate(2px, -2px) scale(1.15);
+}
+
+/* Card title */
+.module-card__title {
+  font-family: var(--sans);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-h);
+  margin: 0 0 8px;
+  line-height: 1.2;
+  text-align: left;
+  letter-spacing: -0.3px;
+}
+
+/* Card description */
+.module-card__desc {
+  font-family: var(--sans);
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 20px;
+  flex-grow: 1;
+  text-align: left;
+  opacity: 0.85;
+}
+
+/* Tag buttons / labels */
+.module-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.module-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.module-card:hover .module-tag {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-h);
+}
+
 /* ═══════════════════════════════════════════════
    Team / Contributors Section
    ═══════════════════════════════════════════════ */

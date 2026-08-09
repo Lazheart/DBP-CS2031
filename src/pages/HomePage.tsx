@@ -1,4 +1,5 @@
 import { Homebar } from "../components/Homebar.tsx"
+import { Link } from "react-router-dom"
 import Footer from "../components/Footer.tsx"
 
 const HomePage = () => {
@@ -7,7 +8,7 @@ const HomePage = () => {
             <Homebar></Homebar>
             <main>
                 <div id="hero" className="hero-section">
-                    <h1>Desarrollo  Basado en Plataformas</h1>
+                    <h1>Desarrollo Basado en Plataformas</h1>
                     <h4>CS2031</h4>
                     <h5>Aprende Git , Docker ,Springboot ,React y mucho más</h5>
                 </div>
@@ -41,24 +42,121 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div id="modules-section" className="modules-section">
-                    <h1>Módulos</h1>
-                    <p> Los topicos relevantes se encuentran divididos  en 4 modulos principales </p>
-                    <br /><p> Si bien cada modulo es independiente, la union de estos permite tener  
-                        una base solida para el desarrollo web </p>
-                    <h5> Nota se recomienda comenzar desde el modulo 'Herramientas de Desarrollo'</h5>
-                    <div id="modules-content-tools" className="modules-content">
-                        <h2> Herramientas de Desarrollo</h2>
+                    <div className="modules-layout">
+                        {/* Left side — Title & description */}
+                        <div className="modules-text">
+                            <h1 className="modules-title">Módulos</h1>
+                            <p className="modules-desc">
+                                Los tópicos relevantes se encuentran divididos en 4 módulos principales
+                            </p>
+                            <p className="modules-desc">
+                                Si bien cada módulo es independiente, la unión de estos permite tener
+                                una base sólida para el desarrollo web
+                            </p>
+                            <p className="modules-note">
+                                Nota: se recomienda comenzar desde el módulo 'Herramientas de Desarrollo'
+                            </p>
+                        </div>
+
+                        {/* Right side — 2×2 module cards */}
+                        <div className="modules-grid">
+                            {/* 01 — Herramientas de Desarrollo */}
+                            <Link to="/tools" className="module-card module-card--recommended" id="modules-content-tools">
+                                <div className="module-card__header">
+                                    <span className="module-card__number">01</span>
+                                    <div className="module-card__icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                                            <path d="M3 9h18M9 9v12" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h2 className="module-card__title">Herramientas de Desarrollo</h2>
+                                <p className="module-card__desc">
+                                    Fundamentos del flujo de trabajo profesional en ingeniería de software.
+                                </p>
+                                <div className="module-card__tags">
+                                    <span className="module-tag">Git</span>
+                                    <span className="module-tag">Docker</span>
+                                    <span className="module-tag">Postman</span>
+                                    <span className="module-tag">Issues</span>
+                                    <span className="module-tag">Pull Requests</span>
+                                </div>
+                            </Link>
+
+                            {/* 02 — Backend: Spring Boot */}
+                            <Link to="/backend" className="module-card" id="modules-content-backend">
+                                <div className="module-card__header">
+                                    <span className="module-card__number">02</span>
+                                    <div className="module-card__icon module-card__icon--arrow">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M5 19L19 5M19 5H10M19 5V14" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h2 className="module-card__title">Backend: Spring Boot</h2>
+                                <p className="module-card__desc">
+                                    Construcción de APIs robustas y seguras con el ecosistema Java moderno.
+                                </p>
+                                <div className="module-card__tags">
+                                    <span className="module-tag">JWT</span>
+                                    <span className="module-tag">DTO</span>
+                                    <span className="module-tag">SMTP</span>
+                                    <span className="module-tag">CORS</span>
+                                    <span className="module-tag">Swagger-UI</span>
+                                </div>
+                            </Link>
+
+                            {/* 03 — Frontend: React */}
+                            <Link to="/frontend" className="module-card" id="modules-content-frontend">
+                                <div className="module-card__header">
+                                    <span className="module-card__number">03</span>
+                                    <div className="module-card__icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(30 12 12)" />
+                                            <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(90 12 12)" />
+                                            <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(150 12 12)" />
+                                            <circle cx="12" cy="12" r="1" fill="currentColor" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h2 className="module-card__title">Frontend: React</h2>
+                                <p className="module-card__desc">
+                                    Interfaces modernas con React y manejo de estado en el navegador.
+                                </p>
+                                <div className="module-card__tags">
+                                    <span className="module-tag">Axios</span>
+                                    <span className="module-tag">React Router</span>
+                                    <span className="module-tag">LocalStorage</span>
+                                    <span className="module-tag">SessionStorage</span>
+                                </div>
+                            </Link>
+
+                            {/* 04 — GitHub Actions & AWS */}
+                            <Link to="/workflows" className="module-card" id="modules-content-deployment">
+                                <div className="module-card__header">
+                                    <span className="module-card__number">04</span>
+                                    <div className="module-card__icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                            <path d="M17.5 19A4.5 4.5 0 0 0 13 14.5c-1.39 0-2.6.63-3.41 1.61A6.5 6.5 0 1 0 7 19h10.5z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h2 className="module-card__title">GitHub Actions &amp; AWS</h2>
+                                <p className="module-card__desc">
+                                    Despliegue continuo y servicios cloud para aplicaciones en producción.
+                                </p>
+                                <div className="module-card__tags">
+                                    <span className="module-tag">GitHub Pages</span>
+                                    <span className="module-tag">GitHub Actions</span>
+                                    <span className="module-tag">AWS EC2</span>
+                                    <span className="module-tag">AWS S3</span>
+                                    <span className="module-tag">AWS Amplify</span>
+                                    <span className="module-tag">Load Balancer</span>
+                                </div>
+                            </Link>
+                        </div>
                     </div>
-                    <div id="modules-content-backend" className="modules-content">
-                        <h2> Backend : Spring Boot</h2>
-                    </div>
-                    <div id="modules-content-frontend" className="modules-content">
-                        <h2>Frontend : React</h2>
-                    </div>
-                    <div id="modules-content-deployment" className="modules-content">
-                        <h2> Github Actions y Deployment</h2>
-                    </div>
-                    
                 </div>
                 <div id="team-section" className="team-section">
                     <p className="team-title">Contribuidores</p>
