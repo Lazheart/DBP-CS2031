@@ -79,13 +79,19 @@ jobs:
           name: cloudflare-dist
           path: ./dist
 
+      - name: Restructure dist for /DBP-CS2031/ prefix
+        run: |
+          mkdir -p ./deploy/DBP-CS2031
+          cp -r ./dist/* ./deploy/DBP-CS2031/
+          printf "/ /DBP-CS2031/ 301\n/DBP-CS2031/* /DBP-CS2031/index.html 200\n" > ./deploy/_redirects
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
-          directory: ./dist
+          directory: ./deploy
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: test
       - name: Add Deployment URL to Summary
