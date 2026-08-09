@@ -18,7 +18,7 @@ const HomePage = () => {
                         Aprende Git, Docker, Spring Boot, React y AWS a través de módulos progresivos.
                     </p>
 
-                    <button className="button-primary-orange" onClick={() => { window.location.href = "#modules-section" }}>
+                    <button className="button-primary" onClick={() => { window.location.href = "#modules-section" }}>
                         Comienza aquí
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                             <path stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M12 5l7 7-7 7"></path>
@@ -37,13 +37,15 @@ const HomePage = () => {
                     <div className="about-grid">
                         {/* Card 1: Guía de Aprendizaje */}
                         <div className="about-card">
-                            <div className="about-card__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-                                </svg>
+                            <div className="about-card__header">
+                                <div className="about-card__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                                    </svg>
+                                </div>
+                                <h3 className="about-card__title">Guía de Aprendizaje</h3>
                             </div>
-                            <h3 className="about-card__title">Guía de Aprendizaje</h3>
                             <p className="about-card__desc">
                                 Una guía de autoaprendizaje para estudiantes y personas interesadas en el mundo del desarrollo web, cubriendo conceptos fundamentales y herramientas modernas.
                             </p>
@@ -51,13 +53,15 @@ const HomePage = () => {
 
                         {/* Card 2: Alineación Académica */}
                         <div className="about-card">
-                            <div className="about-card__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                                    <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
-                                </svg>
+                            <div className="about-card__header">
+                                <div className="about-card__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                        <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5" />
+                                    </svg>
+                                </div>
+                                <h3 className="about-card__title">Alineación Académica</h3>
                             </div>
-                            <h3 className="about-card__title">Alineación Académica</h3>
                             <p className="about-card__desc">
                                 El contenido está alineado con los temas tratados en el curso <strong>Desarrollo Basado en Plataformas (CS2031)</strong> de la <strong>Universidad de Ingeniería y Tecnología (UTEC)</strong>.
                             </p>
@@ -65,14 +69,16 @@ const HomePage = () => {
 
                         {/* Card 3: Práctica Activa */}
                         <div className="about-card">
-                            <div className="about-card__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <polyline points="16 18 22 12 16 6" />
-                                    <polyline points="8 6 2 12 8 18" />
-                                    <line x1="14" y1="4" x2="10" y2="20" />
-                                </svg>
+                            <div className="about-card__header">
+                                <div className="about-card__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <polyline points="16 18 22 12 16 6" />
+                                        <polyline points="8 6 2 12 8 18" />
+                                        <line x1="14" y1="4" x2="10" y2="20" />
+                                    </svg>
+                                </div>
+                                <h3 className="about-card__title">Práctica Activa</h3>
                             </div>
-                            <h3 className="about-card__title">Práctica Activa</h3>
                             <p className="about-card__desc">
                                 No busca reemplazar el curso. Creemos firmemente que la mejor forma de aprender es asistiendo a clases, participando activamente y poniendo en práctica los conocimientos.
                             </p>
@@ -80,13 +86,15 @@ const HomePage = () => {
 
                         {/* Card 4: Espacio de Repaso */}
                         <div className="about-card">
-                            <div className="about-card__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                                    <polyline points="22 4 12 14.01 9 11.01" />
-                                </svg>
+                            <div className="about-card__header">
+                                <div className="about-card__icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                        <polyline points="22 4 12 14.01 9 11.01" />
+                                    </svg>
+                                </div>
+                                <h3 className="about-card__title">Refuerzo y Repaso</h3>
                             </div>
-                            <h3 className="about-card__title">Refuerzo y Repaso</h3>
                             <p className="about-card__desc">
                                 Ofrece un espacio donde los estudiantes pueden repasar los temas tratados en clase, reforzar sus conocimientos y prepararse para las evaluaciones de manera autónoma.
                             </p>
@@ -115,17 +123,18 @@ const HomePage = () => {
                             {/* 01 — Herramientas de Desarrollo */}
                             <Link to="/tools" className="module-card module-card--recommended" id="modules-content-tools">
                                 <div className="module-card__header">
-                                    <span className="module-card__number">01</span>
+                                    <div className="module-card__title-container">
+                                        <span className="module-card__number">01</span>
+                                        <h2 className="module-card__title">Herramientas de Desarrollo</h2>
+                                    </div>
                                     <div className="module-card__icon">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                            <rect x="3" y="3" width="18" height="18" rx="2" />
-                                            <path d="M3 9h18M9 9v12" />
+                                        <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor">
+                                            <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/>
                                         </svg>
                                     </div>
                                 </div>
-                                <h2 className="module-card__title">Herramientas de Desarrollo</h2>
                                 <p className="module-card__desc">
-                                    Fundamentos del flujo de trabajo profesional en ingeniería de software.
+                                    Fundamentos y herramientas para el flujo de trabajo profesional en el desarrollo de software.
                                 </p>
                                 <div className="module-card__tags">
                                     <span className="module-tag">Git</span>
@@ -139,16 +148,18 @@ const HomePage = () => {
                             {/* 02 — Backend: Spring Boot */}
                             <Link to="/backend" className="module-card" id="modules-content-backend">
                                 <div className="module-card__header">
-                                    <span className="module-card__number">02</span>
-                                    <div className="module-card__icon module-card__icon--arrow">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                            <path d="M5 19L19 5M19 5H10M19 5V14" />
+                                    <div className="module-card__title-container">
+                                        <span className="module-card__number">02</span>
+                                        <h2 className="module-card__title">Backend</h2>
+                                    </div>
+                                    <div className="module-card__icon">
+                                        <svg width="24" height="24" viewBox="0 0 97.1 97" fill="currentColor">
+                                            <path d="M88.4,5.6a42.32,42.32,0,0,1-5.2,9.1A48.46,48.46,0,1,0,15.5,84l1.8,1.6A48.41,48.41,0,0,0,96.8,52C98.2,39.8,94.5,24.2,88.4,5.6ZM22.5,84.4a4.12,4.12,0,1,1-.6-5.8A4.21,4.21,0,0,1,22.5,84.4ZM88.1,69.9C76.2,85.8,50.6,80.4,34.3,81.2c0,0-2.9.2-5.8.6,0,0,1.1-.5,2.5-1,11.5-4,16.9-4.8,23.9-8.4C68,65.7,81.1,51,83.7,35.8c-5,14.6-20.2,27.2-34,32.3C40.2,71.6,23.1,75,23.1,75l-.7-.4c-11.6-5.7-12-30.9,9.2-39,9.3-3.6,18.1-1.6,28.2-4,10.7-2.5,23.1-10.5,28.1-21C93.5,27.5,100.3,53.7,88.1,69.9Z"/>
                                         </svg>
                                     </div>
                                 </div>
-                                <h2 className="module-card__title">Backend: Spring Boot</h2>
                                 <p className="module-card__desc">
-                                    Construcción de APIs robustas y seguras con el ecosistema Java moderno.
+                                    Construcción de APIs robustas en spring boot con el ecosistema Java moderno y maven como gestor de dependencias.
                                 </p>
                                 <div className="module-card__tags">
                                     <span className="module-tag">JWT</span>
@@ -162,7 +173,10 @@ const HomePage = () => {
                             {/* 03 — Frontend: React */}
                             <Link to="/frontend" className="module-card" id="modules-content-frontend">
                                 <div className="module-card__header">
-                                    <span className="module-card__number">03</span>
+                                    <div className="module-card__title-container">
+                                        <span className="module-card__number">03</span>
+                                        <h2 className="module-card__title">Frontend</h2>
+                                    </div>
                                     <div className="module-card__icon">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                                             <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(30 12 12)" />
@@ -172,29 +186,31 @@ const HomePage = () => {
                                         </svg>
                                     </div>
                                 </div>
-                                <h2 className="module-card__title">Frontend: React</h2>
                                 <p className="module-card__desc">
-                                    Interfaces modernas con React y manejo de estado en el navegador.
+                                    Interfaces modernas y modulares con React y Typescript conceptos de UX para el desarrollo Web.
                                 </p>
                                 <div className="module-card__tags">
+                                    <span className="module-tag">UX/UI</span>
                                     <span className="module-tag">Axios</span>
-                                    <span className="module-tag">React Router</span>
-                                    <span className="module-tag">LocalStorage</span>
-                                    <span className="module-tag">SessionStorage</span>
+                                    <span className="module-tag">Router</span>
+                                    <span className="module-tag">WebStorage</span>
+                                    <span className="module-tag">Rendering (SPA/SSR)</span>
                                 </div>
                             </Link>
 
                             {/* 04 — GitHub Actions & AWS */}
                             <Link to="/workflows" className="module-card" id="modules-content-deployment">
                                 <div className="module-card__header">
-                                    <span className="module-card__number">04</span>
+                                    <div className="module-card__title-container">
+                                        <span className="module-card__number">04</span>
+                                        <h2 className="module-card__title">Deployment</h2>
+                                    </div>
                                     <div className="module-card__icon">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                            <path d="M17.5 19A4.5 4.5 0 0 0 13 14.5c-1.39 0-2.6.63-3.41 1.61A6.5 6.5 0 1 0 7 19h10.5z" />
+                                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
                                         </svg>
                                     </div>
                                 </div>
-                                <h2 className="module-card__title">GitHub Actions &amp; AWS</h2>
                                 <p className="module-card__desc">
                                     Despliegue continuo y servicios cloud para aplicaciones en producción.
                                 </p>
@@ -260,7 +276,7 @@ const HomePage = () => {
 
                         {/* CTA — Contribuir */}
                         <a
-                            href="https://github.com/Lazheart/DBP-CS2031"
+                            href="https://github.com/Lazheart/DBP-CS2031/fork"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="team-card team-card--cta"

@@ -475,7 +475,7 @@ code {
 }
 
 .hero-title-gradient {
-  background: linear-gradient(90deg, #d6402a 0%, #e9a13b 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, #08060d 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -489,6 +489,65 @@ code {
   max-width: 680px;
   margin: 0 auto;
   opacity: 0.95;
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 36px;
+  padding: 14px 28px;
+  background:#c80909d5;
+  color: #ffffff;
+  border: 1.5px solid #c80909c3;
+  border-radius: 8px;
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: none;
+}
+
+.button-primary:hover {
+  background: #08060d;
+  border-color: #08060d;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: none;
+}
+
+.button-primary:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.button-primary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.button-primary svg {
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.button-primary:hover svg {
+  transform: translateX(4px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-title-gradient {
+    background: linear-gradient(90deg, var(--accent) 0%, #cb582a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .button-primary:hover {
+    background: #000000ea;
+    border-color: #000000;
+  }
 }
 
 /* Responsive adjustments */
@@ -612,6 +671,15 @@ code {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
+/* Card Header */
+.about-card__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
 /* Card Icon */
 .about-card__icon {
   display: flex;
@@ -622,8 +690,8 @@ code {
   border-radius: 8px;
   background: rgba(239, 68, 68, 0.1);
   color: var(--accent);
-  margin-bottom: 20px;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .about-card:hover .about-card__icon {
@@ -636,7 +704,7 @@ code {
   font-size: 20px;
   font-weight: 400;
   color: var(--text-h);
-  margin: 0 0 10px;
+  margin: 0;
   line-height: 1.3;
 }
 
@@ -781,8 +849,17 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   margin-top: 8px; /* space below potential badge */
+  gap: 16px;
+}
+
+.module-card__title-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  flex: 1;
 }
 
 /* Large numbers */
@@ -794,6 +871,7 @@ code {
   color: rgba(239, 68, 68, 0.15); /* red shade matching mockup */
   letter-spacing: -1px;
   transition: color 0.3s ease;
+  flex-shrink: 0;
 }
 
 .module-card:hover .module-card__number {
@@ -808,6 +886,7 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 /* Arrow specific styling (always red and distinct) */
@@ -832,7 +911,7 @@ code {
   font-size: 22px;
   font-weight: 800;
   color: var(--text-h);
-  margin: 0 0 8px;
+  margin: 0;
   line-height: 1.2;
   text-align: left;
   letter-spacing: -0.3px;
