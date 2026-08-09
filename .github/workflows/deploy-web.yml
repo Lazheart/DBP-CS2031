@@ -6,6 +6,11 @@ on:
       - main
       - test
       - dev
+  pull_request:
+    branches:
+      - main
+      - test
+      - dev
 
 permissions:
   contents: read
@@ -36,6 +41,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - uses: actions/configure-pages@v5
+        if: github.ref_name == 'main'
+
       - name: Build
         run: pnpm run build
 
@@ -50,16 +58,13 @@ jobs:
           name: cloudflare-dist
           path: ./dist
 
-      - uses: actions/configure-pages@v5
-        if: github.ref_name == 'main'
-
       - uses: actions/upload-pages-artifact@v3
         if: github.ref_name == 'main'
         with:
           path: ./dist
 
   deploy-cloudflare:
-    if: github.ref_name == 'test'
+    if: github.ref_name == 'test' && github.event_name == 'push'
     needs: build
 
     runs-on: ubuntu-latest
@@ -92,7 +97,7 @@ jobs:
           echo ""
           echo "To preview this deployment, go to: ${{ steps.deploy.outputs.url }}" 
   deploy-github-pages:
-    if: github.ref_name == 'main'
+    if: github.ref_name == 'main' && github.event_name == 'push'
     needs: build
 
     runs-on: ubuntu-latest
