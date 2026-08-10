@@ -797,6 +797,20 @@ code {
   font-style: italic;
 }
 
+.modules-link {
+  color: var(--text-h);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--accent);
+  transition: all 0.2s ease;
+  font-style: normal;
+}
+
+.modules-link:hover {
+  color: var(--accent);
+}
+
 /* Grid of 4 cards */
 .modules-grid {
   flex: 1 1 65%;
