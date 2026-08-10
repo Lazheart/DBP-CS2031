@@ -9,6 +9,7 @@ import ToolsPage from "../pages/tools/ToolsPage"
 import BackendPage from "../pages/backend/BackendPage"
 import FrontendPage from "../pages/frontend/FrontendPage"
 import WorkflowDeployPage from "../pages/workflows/WorkflowDeployPage"
+import IntroductionPage from "../pages/IntroductionPage"
 
 
 const router = createBrowserRouter(
@@ -20,6 +21,10 @@ const router = createBrowserRouter(
     {
       path: "/homepage",
       element: <HomePage />,
+    },
+    {
+      path: "/introduction",
+      element: <IntroductionPage />,
     },
     {
       path: "/tools",
