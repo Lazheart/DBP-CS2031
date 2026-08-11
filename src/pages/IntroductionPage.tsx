@@ -80,8 +80,9 @@ const IntroductionPage = () => {
     };
 
     return (
+
         <ClassLayout
-            lesson={{ topic: 'Introducción', title: 'Fundamentos del DBP' }}
+            lesson={{ topic: 'Introducción', title: 'Fundamentos del Curso' }}
             progress={progress}
             steps={topics}
             badge="Introducción"
@@ -114,7 +115,7 @@ const IntroductionPage = () => {
             }}
             onNext={handleNext}
             nextText="Ir al cuestionario"
-            onPrev={undefined} // Or set to a function if there's a previous page
+            onPrev={undefined}
         >
             <div id="intro-dbp" className="scroll-mt-24">
                 <p className="text-[var(--text)] text-lg leading-relaxed mb-4">
