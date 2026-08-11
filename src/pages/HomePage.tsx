@@ -120,7 +120,7 @@ const HomePage = () => {
                         </p>
 
                         <p className="modules-note">
-                            <strong>Nota:</strong> Se recomienda comenzar por <Link  className="modules-link" to="/introduction" id="intro-link">Introduccion</Link>
+                            Se recomienda comenzar  por <br /> <Link  className="modules-link" to="/introduction" id="intro-link">Introduccion</Link>
                         </p>
                         </div>
 
