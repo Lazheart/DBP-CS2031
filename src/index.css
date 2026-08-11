@@ -879,6 +879,22 @@ code {
   margin-top: 8px; /* space below potential badge */
   gap: 16px;
 }
+.intro-advice {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 24px 24px;
+
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
 
 .module-card__title-container {
   display: flex;
