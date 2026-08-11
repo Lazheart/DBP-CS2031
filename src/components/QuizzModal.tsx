@@ -28,7 +28,7 @@ interface Props {
 
 type Phase = 'intro' | 'question' | 'result'
 
-const PASS_THRESHOLD = 0.6
+const PASS_THRESHOLD = 0.8 // 4 de 5 preguntas correctas
 
 export default function QuizModal({
     lessonId: _lessonId,
