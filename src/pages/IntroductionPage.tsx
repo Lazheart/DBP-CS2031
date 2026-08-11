@@ -3,6 +3,7 @@ import ProgressBar from '../components/ProgressBar'
 import StepSideBar from '../components/StepSideBar'
 import QuizModal from '../components/QuizzModal'
 import { introSubModules } from '../data/introductionQuestions'
+import { useLocalStorage } from '../hook/SessionStorageManager'
 
 /* ─── Sub-module content ─────────────────────────────────── */
 
@@ -201,8 +202,8 @@ const SubModuleContent = ({ id }: { id: string }) => {
 const PASS_THRESHOLD = 0.8 // 4/5 questions correct
 
 const IntroductionPage = () => {
-    const [activeId, setActiveId] = useState(introSubModules[0].id)
-    const [completedIds, setCompletedIds] = useState<string[]>([])
+    const [activeId, setActiveId] = useLocalStorage('intro-active-id', introSubModules[0].id)
+    const [completedIds, setCompletedIds] = useLocalStorage<string[]>('intro-completed-ids', [])
     const [quizOpen, setQuizOpen] = useState(false)
 
     const activeModule = introSubModules.find((m) => m.id === activeId)!
