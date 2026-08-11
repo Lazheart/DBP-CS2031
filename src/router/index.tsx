@@ -30,6 +30,10 @@ const router = createBrowserRouter(
       element: <ToolsPage />,
     },
     {
+      path: "/tools/github",
+      element: <GitPage />,
+    },
+    {
       path: "/backend",
       element: <BackendPage />,
     },
