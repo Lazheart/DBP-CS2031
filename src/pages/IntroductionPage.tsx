@@ -199,7 +199,6 @@ const SubModuleContent = ({ id }: { id: string }) => {
 
 /* ─── Main page ──────────────────────────────────────────── */
 
-const PASS_THRESHOLD = 0.8 // 4/5 questions correct
 
 const IntroductionPage = () => {
     const [activeId, setActiveId] = useLocalStorage('intro-active-id', introSubModules[0].id)
