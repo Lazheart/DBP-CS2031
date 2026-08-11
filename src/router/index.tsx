@@ -1,16 +1,15 @@
-import { createBrowserRouter } from "react-router-dom"
-import NotFoundPage from "../pages/NotFoundPage"
-import HomePage from "../pages/HomePage"
-import CommingSoonPage from "../pages/CommingSoonPage"
-import GitPage from "../pages/tools/GitPage"
-import DockerPage from "../pages/tools/DockerPage"
-import PostmanPage from "../pages/tools/PostmanPage"
-import ToolsPage from "../pages/tools/ToolsPage"
-import BackendPage from "../pages/backend/BackendPage"
-import FrontendPage from "../pages/frontend/FrontendPage"
-import WorkflowDeployPage from "../pages/workflows/WorkflowDeployPage"
-import IntroductionPage from "../pages/IntroductionPage"
-
+import { createBrowserRouter } from "react-router-dom";
+import NotFoundPage from "../pages/NotFoundPage";
+import HomePage from "../pages/HomePage";
+import CommingSoonPage from "../pages/CommingSoonPage";
+import GitPage from "../pages/tools/GitPage";
+import DockerPage from "../pages/tools/DockerPage";
+import PostmanPage from "../pages/tools/PostmanPage";
+import ToolsPage from "../pages/tools/ToolsPage";
+import BackendPage from "../pages/backend/BackendPage";
+import FrontendHomePage from "../pages/frontend/FrontendHomePage";
+import WorkflowDeployPage from "../pages/workflows/WorkflowDeployPage";
+import IntroductionPage from "../pages/IntroductionPage";
 
 const router = createBrowserRouter(
   [
@@ -36,7 +35,7 @@ const router = createBrowserRouter(
     },
     {
       path: "/frontend",
-      element: <FrontendPage />,
+      element: <FrontendHomePage />,
     },
     {
       path: "/workflows",
@@ -82,7 +81,7 @@ const router = createBrowserRouter(
   ],
   {
     basename: "/DBP-CS2031",
-  }
-)
+  },
+);
 
-export default router
+export default router;
