@@ -19,6 +19,7 @@ export interface QuizQuestion {
 
 interface Props {
     lessonId: string
+    lessonNumber: string
     lessonTitle: string
     topicColor: string
     questions: QuizQuestion[]
@@ -32,6 +33,7 @@ const PASS_THRESHOLD = 0.8 // 4 de 5 preguntas correctas
 
 export default function QuizModal({
     lessonId: _lessonId,
+    lessonNumber,
     lessonTitle,
     topicColor,
     questions,
@@ -152,8 +154,9 @@ export default function QuizModal({
                 {phase === 'intro' && (
                     <section className="quiz-content quiz-intro">
                         <div className="quiz-intro-heading">
+                            {/* TODO: Hacer esto un componente reusable en el sidebar */}
                             <span className="quiz-section-number">
-                                01
+                                {lessonNumber}
                             </span>
 
                             <div>
