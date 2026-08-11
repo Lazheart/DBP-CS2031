@@ -9,14 +9,16 @@ const IntroAdvice = () => {
     if (introCompleted) return null
 
     return (
-        <p className="modules-Note">
-            <strong>ATENCIÓN</strong>
-            <br />
-            Para poder entender el siguiente módulo completa{' '}
-            <Link className="modules-link" to="/introduction" id="intro-link">
-                Introducción
-            </Link>
-        </p>
+        <div className="intro-advice">
+            <p className="modules-note">
+                <strong>ATENCIÓN</strong>
+                <br />
+                Para poder entender el siguiente módulo completa{' '}
+                <Link className="modules-link" to="/introduction" id="intro-link">
+                    Introducción
+                </Link>
+            </p>
+        </div>
     )
 }
 

@@ -789,12 +789,12 @@ code {
 
 .modules-note {
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1.5;
   color: var(--text);
-  opacity: 0.85;
-  margin-top: 12px;
-  font-style: italic;
+  margin-top: 0;
+  font-style: normal;
+  text-align: center;
 }
 
 .modules-link {
