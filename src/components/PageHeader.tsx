@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import dbpLogo from "/dbp-cs2031.png";
 
 interface ModuleHeaderProps {
   lesson?: {
@@ -130,6 +131,20 @@ const ModuleHeader: React.FC<ModuleHeaderProps> = ({
             {lesson.title}
           </div>
         </div>
+
+        {/* LOGO DBP */}
+        <img
+          src={dbpLogo}
+          alt="DBP CS2031"
+          style={{
+            marginLeft: "auto",
+            flexShrink: 0,
+            width: "30px",
+            height: "30px",
+            borderRadius: "6px",
+            objectFit: "cover",
+          }}
+        />
       </div>
     </header>
   );
