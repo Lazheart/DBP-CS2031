@@ -104,18 +104,24 @@ const HomePage = () => {
                 <div id="modules-section" className="modules-section">
                     <div className="modules-layout">
                         {/* Left side — Title & description */}
+
                         <div className="modules-text">
                             <h1 className="modules-title">Módulos</h1>
-                            <p className="modules-desc">
-                                Los tópicos relevantes se encuentran divididos en 4 módulos principales
-                            </p>
-                            <p className="modules-desc">
-                                Si bien cada módulo es independiente, la unión de estos permite tener
-                                una base sólida para el desarrollo web
-                            </p>
-                            <p className="modules-note">
-                                Nota: se recomienda comenzar desde el módulo 'Herramientas de Desarrollo'
-                            </p>
+
+                        <p className="modules-desc">
+                            Hemos dividido los tópicos en cuatro módulos principales y un submódulo
+                            introductorio. Si bien cada módulo puede estudiarse de manera independiente,
+                            la combinación de estos proporciona una base sólida para el desarrollo web.
+                        </p>
+
+                        <p className="modules-desc">
+                            Cada módulo contiene una serie de recursos diseñados para reforzar y
+                            complementar los temas abordados en el curso <strong>CS2031</strong>.
+                        </p>
+
+                        <p className="modules-note">
+                            <strong>Nota:</strong> Se recomienda comenzar por <Link  className="modules-link" to="/introduction" id="intro-link">Introduccion</Link>
+                        </p>
                         </div>
 
                         {/* Right side — 2×2 module cards */}
@@ -140,8 +146,7 @@ const HomePage = () => {
                                     <span className="module-tag">Git</span>
                                     <span className="module-tag">Docker</span>
                                     <span className="module-tag">Postman</span>
-                                    <span className="module-tag">Issues</span>
-                                    <span className="module-tag">Pull Requests</span>
+                                    <span className="module-tag">Github</span>
                                 </div>
                             </Link>
 
