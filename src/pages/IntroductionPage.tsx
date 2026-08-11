@@ -7,7 +7,7 @@ import { useLocalStorage } from '../hook/SessionStorageManager'
 
 /* ─── Sub-module content ─────────────────────────────────── */
 
-const SubModuleContent = ({ id }: { id: string }) => {
+const SubModuleContent = ({ id }: { id: string, lessonId: string }) => {
     switch (id) {
         case 'intro-dbp':
             return (
@@ -250,7 +250,7 @@ const IntroductionPage = () => {
 
                 {/* Main content */}
                 <main className="class-main">
-                    <SubModuleContent id={activeId} />
+                    <SubModuleContent id={activeId} lessonId={'00'} />
 
                     {/* Completion banner */}
                     {isModuleComplete && (
@@ -302,6 +302,7 @@ const IntroductionPage = () => {
             {quizOpen && (
                 <QuizModal
                     lessonId={activeId}
+                    lessonNumber="00"
                     lessonTitle={activeModule.title}
                     topicColor={activeModule.color}
                     questions={activeModule.questions}
