@@ -19,7 +19,7 @@ const ToolsPage = () => {
 
             <h1 className="">¿Basta con saber programar <br /> para ser desarrollador ?</h1>
 
-            <div className="toolpage-description padding-20px">
+            <div className="toolpage-body padding-20px">
                 <p>
                     Desarrollar software va más allá de construir APIs e interfaces de usuario.
                     <br />Existen diversas herramientas que permiten optimizar el desarrollo,
@@ -27,11 +27,23 @@ const ToolsPage = () => {
                 </p>
             </div>
 
+            <div className="toolpage-desc padding-20px">
+                <p>
+                    Estas herramientas no solo son útiles, sino que a menudo son requisitos para 
+                    trabajar como desarrollador de software profesional.
+                    <br />Dominarlas te diferenciará como profesional y te permitirá ser más 
+                    productivo y eficiente en tu día a día.
+                </p>
+
+                <p>
+                     <h2>Herramientas de Desarrollo</h2>
+                     <h3>En este modulo revisaremos detalladamente las siguientes herramientas</h3>
+                     <p> Recomendamos ampliamente iniciar por git y finalizar viendo Github</p>
+                     <br />
+                </p>
+            </div>
+
             <div className="toolspage-subtopics padding-20px">
-                <h2>Herramientas de Desarrollo</h2>
-                <h3>En este modulo revisaremos detalladamente las siguientes herramientas</h3>
-                <p> Recomendamos ampliamente iniciar por git y finalizar viendo Github</p>
-                <br />
                 <div>
                 <Link to="/tools/git" className="flex items-center gap-2"><FaGitAlt size={20} /> Pagina de git</Link>
                     Herramienta de control de Versiones , asegurate siempre de poder volver a una version correcta                
