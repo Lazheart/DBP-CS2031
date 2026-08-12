@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom"
 import { FaGitAlt, FaGithub, FaDocker } from "react-icons/fa"
 import { SiPostman } from "react-icons/si"
 import IntroAdvice from "../../components/IntroAdvice"
 import ModuleHeader from "../../components/PageHeader"
-import ModuleSessionCard from "../../components/ModuleSessionCard"
 
 const ToolsPage = () => {
+    const iconsSize = 45;
     return (
         <div className="tools-page">
             <ModuleHeader
@@ -42,33 +43,49 @@ const ToolsPage = () => {
                         <p className="text-sm text-red-400">Recomendamos ampliamente iniciar por Git y finalizar viendo GitHub</p>
                     </div>
                 </div>
+                
 
                 <div className="toolspage-subtopics padding-20px">
-                    <div className="modules-grid">
-                        <ModuleSessionCard
-                            title="Git"
-                            description="Herramienta de control de Versiones , asegurate siempre de poder volver a una version correcta"
-                            to="/tools/git"
-                            icon={<FaGitAlt size={24} />}
-                        />
-                        <ModuleSessionCard
-                            title="Docker"
-                            description='Plataforma que permite crear y distribuir aplicaciones en contenedores. Evita el "funcionaba en mi maquina"'
-                            to="/tools/docker"
-                            icon={<FaDocker size={24} />}
-                        />
-                        <ModuleSessionCard
-                            title="Postman"
-                            description="Herramienta de pruebas de APIs y peticiones HTTP . Automatiza pruebas a APIs y muchisimo mas ."
-                            to="/tools/postman"
-                            icon={<SiPostman size={24} />}
-                        />
-                        <ModuleSessionCard
-                            title="GitHub"
-                            description="Plataforma web colaborativa  basada en git. Ejecuta flujos de trabajo complejos con GitHub Actions"
-                            to="/tools/github"
-                            icon={<FaGithub size={24} />}
-                        />
+                    <div className="tool-grid">
+                        <Link to="/tools/git" className="tool-card">
+                            <div className="tool-card__icon">
+                                <FaGitAlt size={iconsSize} />
+                            </div>
+                            <h3 className="tool-card__title">Git</h3>
+                            <p className="tool-card__desc">
+                                Herramienta de control de Versiones , asegurate siempre de poder volver a una version correcta
+                            </p>
+                        </Link>
+
+                        <Link to="/tools/docker" className="tool-card">
+                            <div className="tool-card__icon">
+                                <FaDocker size={iconsSize} />
+                            </div>
+                            <h3 className="tool-card__title">Docker</h3>
+                            <p className="tool-card__desc">
+                                Plataforma que permite crear y distribuir aplicaciones en contenedores. Evita el "funcionaba en mi maquina"
+                            </p>
+                        </Link>
+
+                        <Link to="/tools/postman" className="tool-card">
+                            <div className="tool-card__icon">
+                                <SiPostman size={iconsSize} />
+                            </div>
+                            <h3 className="tool-card__title">Postman</h3>
+                            <p className="tool-card__desc">
+                                Herramienta de pruebas de APIs y peticiones HTTP . Automatiza pruebas a APIs y muchisimo mas .
+                            </p>
+                        </Link>
+
+                        <Link to="/tools/github" className="tool-card">
+                            <div className="tool-card__icon">
+                                <FaGithub size={iconsSize} />
+                            </div>
+                            <h3 className="tool-card__title">GitHub</h3>
+                            <p className="tool-card__desc">
+                                Plataforma web colaborativa  basada en git. Ejecuta flujos de trabajo complejos con GitHub Actions
+                            </p>
+                        </Link>
                     </div>
                 </div>
             </div>
