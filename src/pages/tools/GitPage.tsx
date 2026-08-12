@@ -264,7 +264,7 @@ const GitPage = () => {
                             disabled={completedIds.includes(activeId)}
                         >
                             {completedIds.includes(activeId)
-                                ? '✓ Submódulo completado'
+                                ? '🎉 Submódulo completado'
                                 : 'Iniciar cuestionario'}
                         </button>
                     </div>
