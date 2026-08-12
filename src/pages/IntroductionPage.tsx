@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ProgressBar from '../components/ProgressBar'
 import StepSideBar from '../components/StepSideBar'
 import QuizModal from '../components/QuizzModal'
@@ -227,6 +227,12 @@ const IntroductionPage = () => {
     }))
 
     const isModuleComplete = completedIds.length === introSubModules.length
+
+    useEffect(() => {
+        if (isModuleComplete) {
+            localStorage.setItem('introCompleted', JSON.stringify(true))
+        }
+    }, [isModuleComplete])
     const currentIdx = introSubModules.findIndex((m) => m.id === activeId)
     const hasNext = currentIdx < introSubModules.length - 1
     const hasPrev = currentIdx > 0

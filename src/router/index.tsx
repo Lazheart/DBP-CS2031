@@ -10,78 +10,85 @@ import BackendPage from "../pages/backend/BackendPage";
 import FrontendHomePage from "../pages/frontend/FrontendHomePage";
 import WorkflowDeployPage from "../pages/workflows/WorkflowDeployPage";
 import IntroductionPage from "../pages/IntroductionPage";
+import GithubPage from "../pages/tools/GithubPage";
+
+import RootLayout from "../components/RootLayout";
 
 const router = createBrowserRouter(
   [
     {
-      path: "/",
-      element: <HomePage />,
-    },
-    {
-      path: "/homepage",
-      element: <HomePage />,
-    },
-    {
-      path: "/introduction",
-      element: <IntroductionPage />,
-    },
-    {
-      path: "/tools",
-      element: <ToolsPage />,
-    },
-    {
-      path: "/tools/github",
-      element: <GitPage />,
-    },
-    {
-      path: "/backend",
-      element: <BackendPage />,
-    },
-    {
-      path: "/frontend",
-      element: <FrontendHomePage />,
-    },
-    {
-      path: "/workflows",
-      element: <WorkflowDeployPage />,
-    },
-
-    {
-      path: "/tools/git",
-      element: <GitPage />,
-    },
-    {
-      path: "/tools/docker",
-      element: <DockerPage />,
-    },
-    {
-      path: "/tools/postman",
-      element: <PostmanPage />,
-    },
-    {
-      path: "/git",
-      element: <GitPage />,
-    },
-    {
-      path: "/tools/git/",
-      element: <GitPage />,
-    },
-    {
-      path: "/comming-soon",
-      element: <CommingSoonPage />,
-    },
-    {
-      path: "/frontend/*",
-      element: <CommingSoonPage />,
-    },
-    {
-      path: "/not-found",
-      element: <NotFoundPage />,
-    },
-    {
-      path: "*",
-      element: <NotFoundPage />,
-    },
+      element: <RootLayout />,
+      children: [
+        {
+          path: "/",
+          element: <HomePage />,
+        },
+        {
+          path: "/homepage",
+          element: <HomePage />,
+        },
+        {
+          path: "/introduction",
+          element: <IntroductionPage />,
+        },
+        {
+          path: "/tools",
+          element: <ToolsPage />,
+        },
+        {
+          path: "/tools/github",
+          element: <GithubPage />,
+        },
+        {
+          path: "/backend",
+          element: <BackendPage />,
+        },
+        {
+          path: "/frontend",
+          element: <FrontendHomePage />,
+        },
+        {
+          path: "/workflows",
+          element: <WorkflowDeployPage />,
+        },
+        {
+          path: "/tools/git",
+          element: <GitPage />,
+        },
+        {
+          path: "/tools/docker",
+          element: <DockerPage />,
+        },
+        {
+          path: "/tools/postman",
+          element: <PostmanPage />,
+        },
+        {
+          path: "/git",
+          element: <GitPage />,
+        },
+        {
+          path: "/tools/git/",
+          element: <GitPage />,
+        },
+        {
+          path: "/comming-soon",
+          element: <CommingSoonPage />,
+        },
+        {
+          path: "/frontend/*",
+          element: <CommingSoonPage />,
+        },
+        {
+          path: "/not-found",
+          element: <NotFoundPage />,
+        },
+        {
+          path: "*",
+          element: <NotFoundPage />,
+        },
+      ]
+    }
   ],
   {
     basename: "/DBP-CS2031",

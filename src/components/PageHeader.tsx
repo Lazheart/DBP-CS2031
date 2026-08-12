@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import dbpLogo from "/dbp-cs2031.png";
 
 interface ModuleHeaderProps {
   lesson?: {
@@ -15,6 +16,15 @@ const ModuleHeader: React.FC<ModuleHeaderProps> = ({
   },
 }) => {
   const navigate = useNavigate();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleBackClick = () => {
     navigate("/");
@@ -38,9 +48,14 @@ const ModuleHeader: React.FC<ModuleHeaderProps> = ({
         position: "sticky",
         top: 0,
         zIndex: 40,
-        background: "rgba(30,30,34,0.95)",
-        backdropFilter: "blur(12px)",
+        background: scrolled
+          ? "rgba(18,19,24,0.95)"
+          : "rgba(24,25,31,0.85)",
+        backdropFilter: "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
         borderBottom: "1px solid rgba(242,240,235,0.07)",
+        boxShadow: scrolled ? "0 4px 24px rgba(0,0,0,0.35)" : "none",
+        transition: "background 0.3s ease, box-shadow 0.3s ease",
       }}
     >
       <div
@@ -130,6 +145,20 @@ const ModuleHeader: React.FC<ModuleHeaderProps> = ({
             {lesson.title}
           </div>
         </div>
+
+        {/* LOGO DBP */}
+        <img
+          src={dbpLogo}
+          alt="DBP CS2031"
+          style={{
+            marginLeft: "auto",
+            flexShrink: 0,
+            width: "30px",
+            height: "30px",
+            borderRadius: "6px",
+            objectFit: "cover",
+          }}
+        />
       </div>
     </header>
   );
