@@ -617,6 +617,7 @@ code {
    About Section
    ═══════════════════════════════════════════════ */
 .about-section {
+  scroll-margin-top: 72px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -753,6 +754,7 @@ code {
   padding: 64px 32px;
   text-align: left;
   border-top: 1px solid var(--border);
+  scroll-margin-top: 72px;
 
   @media (max-width: 1024px) {
     padding: 48px 20px;
@@ -1196,6 +1198,7 @@ code {
 .team-section {
   padding: 64px 32px;
   text-align: left;
+  scroll-margin-top: 72px;
 
   @media (max-width: 768px) {
     padding: 48px 20px;
