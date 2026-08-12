@@ -323,4 +323,56 @@ export const introSubModules: SubModule[] = [
             },
         ],
     },
+    {
+        id: 'comandos-terminal',
+        title: 'Comandos de Terminal',
+        color: '#C94747',
+        questions: [
+            {
+                question: '¿Qué comando se utiliza para crear un nuevo directorio (carpeta) en la terminal?',
+                options: ['touch', 'mkdir', 'ls', 'cat'],
+                correct: 1,
+                explanation:
+                    'mkdir (Make Directory) se usa para crear nuevas carpetas.',
+            },
+            {
+                question: '¿Cuál es la función del comando "ls"?',
+                options: [
+                    'Listar los archivos y directorios de la ubicación actual',
+                    'Limpiar la pantalla de la terminal',
+                    'Eliminar un archivo',
+                    'Crear un enlace simbólico',
+                ],
+                correct: 0,
+                explanation:
+                    'ls (List) lista los archivos y directorios de la ubicación en la que te encuentras.',
+            },
+            {
+                question: 'Si deseas mostrar el contenido de un archivo de texto en la terminal, ¿qué comando usas?',
+                options: ['mkdir', 'nano', 'touch', 'cat'],
+                correct: 3,
+                explanation:
+                    'cat (Concatenate) lee y muestra el contenido completo de un archivo directamente en la terminal.',
+            },
+            {
+                question: '¿Para qué se utilizan comandos como "nano" o "pico"?',
+                options: [
+                    'Para navegar por internet desde la terminal',
+                    'Para comprimir archivos',
+                    'Son editores de texto integrados para modificar archivos en la terminal',
+                    'Para buscar texto dentro de un archivo',
+                ],
+                correct: 2,
+                explanation:
+                    'nano y pico son editores de texto de línea de comandos, utilizados para crear y modificar archivos de texto rápidamente.',
+            },
+            {
+                question: '¿Qué comando emplearías para crear un archivo vacío llamado "script.js"?',
+                options: ['touch script.js', 'mkdir script.js', 'cat script.js', 'ls script.js'],
+                correct: 0,
+                explanation:
+                    'touch se utiliza para crear archivos vacíos o para actualizar sus marcas de tiempo de modificación.',
+            },
+        ],
+    },
 ]

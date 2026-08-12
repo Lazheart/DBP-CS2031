@@ -204,7 +204,7 @@ const HomePage = () => {
                             </Link>
 
                             {/* 04 — GitHub Actions & AWS */}
-                            <Link to="/workflows" className="module-card" id="modules-content-deployment">
+                            <Link to="/deployment" className="module-card" id="modules-content-deployment">
                                 <div className="module-card__header">
                                     <div className="module-card__title-container">
                                         <span className="module-card__number">04</span>
