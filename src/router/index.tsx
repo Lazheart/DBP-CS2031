@@ -8,7 +8,7 @@ import PostmanPage from "../pages/tools/PostmanPage";
 import ToolsPage from "../pages/tools/ToolsPage";
 import BackendPage from "../pages/backend/BackendPage";
 import FrontendHomePage from "../pages/frontend/FrontendHomePage";
-import WorkflowDeployPage from "../pages/workflows/WorkflowDeployPage";
+import DeployPage from "../pages/deploy/DeployPage";
 import IntroductionPage from "../pages/IntroductionPage";
 import GithubPage from "../pages/tools/GithubPage";
 
@@ -21,6 +21,10 @@ const router = createBrowserRouter(
       children: [
         {
           path: "/",
+          element: <HomePage />,
+        },
+        {
+          path: "/DBP-CS2031/",
           element: <HomePage />,
         },
         {
@@ -48,8 +52,12 @@ const router = createBrowserRouter(
           element: <FrontendHomePage />,
         },
         {
-          path: "/workflows",
-          element: <WorkflowDeployPage />,
+          path: "/deployment",
+          element: <DeployPage />,
+        },
+        {
+          path: "/deploy/",
+          element: <DeployPage />,
         },
         {
           path: "/tools/git",
@@ -76,7 +84,11 @@ const router = createBrowserRouter(
           element: <CommingSoonPage />,
         },
         {
-          path: "/frontend/*",
+          path: "/backend/*",
+          element: <CommingSoonPage />,
+        },
+        {
+          path: "/deployment/*",
           element: <CommingSoonPage />,
         },
         {
