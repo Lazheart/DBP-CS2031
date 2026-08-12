@@ -73,7 +73,7 @@ export const introSubModules: SubModule[] = [
     {
         id: 'que-es-framework',
         title: 'Qué es un Framework',
-        color: '#B88A3D',
+        color: '#C94747',
         questions: [
             {
                 question: '¿Qué es un framework en el desarrollo de software?',
@@ -135,7 +135,7 @@ export const introSubModules: SubModule[] = [
     {
         id: 'que-es-api',
         title: 'Qué es una API',
-        color: '#4A9C6D',
+        color: '#C94747',
         questions: [
             {
                 question: '¿Qué significa la sigla API?',
@@ -202,7 +202,7 @@ export const introSubModules: SubModule[] = [
     {
         id: 'url-uri',
         title: 'URL & URI',
-        color: '#5B8DD9',
+        color: '#C94747',
         questions: [
             {
                 question: '¿Qué significa URI?',
@@ -269,7 +269,7 @@ export const introSubModules: SubModule[] = [
     {
         id: 'protocolos-http',
         title: 'Protocolos y Métodos HTTP',
-        color: '#9C6BAF',
+        color: '#C94747',
         questions: [
             {
                 question: '¿Qué significa HTTP?',

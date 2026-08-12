@@ -20,7 +20,8 @@ const ToolsPage = () => {
         {/* Contenedor del texto introductorio */}
         <div className="tools-intro-container">
           <h1 className="tools-intro-title">
-            Domina tus herramientas de desarrollo
+            DOMINA TUS <span className="hero-title-gradient">HERRAMIENTAS</span>{" "}
+            DE DESARROLLO
           </h1>
 
           <p className="tools-intro-desc">
