@@ -10,6 +10,7 @@ import BackendPage from "../pages/backend/BackendPage";
 import FrontendHomePage from "../pages/frontend/FrontendHomePage";
 import WorkflowDeployPage from "../pages/workflows/WorkflowDeployPage";
 import IntroductionPage from "../pages/IntroductionPage";
+import GithubPage from "../pages/tools/GithubPage";
 
 const router = createBrowserRouter(
   [
@@ -31,7 +32,7 @@ const router = createBrowserRouter(
     },
     {
       path: "/tools/github",
-      element: <GitPage />,
+      element: <GithubPage />,
     },
     {
       path: "/backend",

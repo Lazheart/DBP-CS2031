@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 interface ModuleSessionCardProps {
-  number: string;
+  number?: string;
   title: string;
   description: string;
   to: string;
@@ -27,7 +27,7 @@ const ModuleSessionCard: React.FC<ModuleSessionCardProps> = ({
     >
       <div className="module-card__header">
         <div className="module-card__title-container">
-          <span className="module-card__number">{number}</span>
+          {number && <span className="module-card__number">{number}</span>}
 
           <h2 className="module-card__title">{title}</h2>
         </div>

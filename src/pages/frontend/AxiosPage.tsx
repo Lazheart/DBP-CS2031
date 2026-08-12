@@ -386,6 +386,7 @@ const AxiosPage = () => {
       {quizOpen && (
         <QuizModal
           lessonId={activeId}
+          lessonNumber={activeId}
           lessonTitle={activeModule.title}
           topicColor={activeModule.color}
           questions={activeModule.questions}
