@@ -496,7 +496,7 @@ code {
 }
 
 .hero-title-gradient {
-  background: linear-gradient(90deg, var(--accent) 0%, #08060d 100%);
+  background: linear-gradient(90deg, var(--accent) 0%, #d1582c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1132,7 +1132,7 @@ code {
   line-height: 1.25;
   letter-spacing: -1.5px;
   color: var(--text-h);
-  margin: 2 px 0 24px;
+  margin: 2px 0 24px;
 
   @media (max-width: 1024px) {
     font-size: 36px;
