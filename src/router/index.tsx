@@ -77,8 +77,8 @@ const router = createBrowserRouter(
           element: <DockerPage />,
         },
         {
-          path: "/tools/postman",
-          element: <PostmanPage />,
+          path: "/tools/postman/",
+          element: <CommingSoonPage />,
         },
         {
           path: "/git",
