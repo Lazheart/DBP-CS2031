@@ -1,26 +1,25 @@
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import NotFoundPage from "../pages/NotFoundPage";
-import HomePage from "../pages/HomePage";
-import CommingSoonPage from "../pages/CommingSoonPage";
-import GitPage from "../pages/tools/GitPage";
-import DockerPage from "../pages/tools/DockerPage";
-{
-  /* import PostmanPage from "../pages/tools/PostmanPage"; */
-}
-import ToolsPage from "../pages/tools/ToolsPage";
-import BackendPage from "../pages/backend/BackendPage";
-import FrontendHomePage from "../pages/frontend/FrontendHomePage";
-import DeployPage from "../pages/deploy/DeployPage";
-import IntroductionPage from "../pages/IntroductionPage";
-import GithubPage from "../pages/tools/GithubPage";
-
 import RootLayout from "../components/RootLayout";
-import AxiosPage from "../pages/frontend/RouterAxiosPage";
-import ReactCssPage from "../pages/frontend/ReactCssPage";
-import RouterAxiosPage from "../pages/frontend/RouterAxiosPage";
-import HooksStoragePage from "../pages/frontend/HooksStoragePage";
-import TypescriptUxPage from "../pages/frontend/TypescriptUxPage";
-import ComponentsPage from "../pages/frontend/ComponentsPage";
+
+const NotFoundPage = lazy(() => import("../pages/NotFoundPage"));
+const HomePage = lazy(() => import("../pages/HomePage"));
+const CommingSoonPage = lazy(() => import("../pages/CommingSoonPage"));
+const GitPage = lazy(() => import("../pages/tools/GitPage"));
+const DockerPage = lazy(() => import("../pages/tools/DockerPage"));
+const ToolsPage = lazy(() => import("../pages/tools/ToolsPage"));
+const BackendPage = lazy(() => import("../pages/backend/BackendPage"));
+const FrontendHomePage = lazy(() => import("../pages/frontend/FrontendHomePage"));
+const DeployPage = lazy(() => import("../pages/deploy/DeployPage"));
+const IntroductionPage = lazy(() => import("../pages/IntroductionPage"));
+const GithubPage = lazy(() => import("../pages/tools/GithubPage"));
+
+const AxiosPage = lazy(() => import("../pages/frontend/RouterAxiosPage"));
+const ReactCssPage = lazy(() => import("../pages/frontend/ReactCssPage"));
+const RouterAxiosPage = lazy(() => import("../pages/frontend/RouterAxiosPage"));
+const HooksStoragePage = lazy(() => import("../pages/frontend/HooksStoragePage"));
+const TypescriptUxPage = lazy(() => import("../pages/frontend/TypescriptUxPage"));
+const ComponentsPage = lazy(() => import("../pages/frontend/ComponentsPage"));
 
 const router = createBrowserRouter(
   [
