@@ -1,4 +1,4 @@
-const WorkflowDeployPage = () => {
+const DeployPage = () => {
     return (
         <div className="workflow-deploy-page">
             <h1>Workflow Deploy</h1>
@@ -6,4 +6,4 @@ const WorkflowDeployPage = () => {
     )
 }
 
-export default WorkflowDeployPage
+export default DeployPage;

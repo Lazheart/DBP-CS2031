@@ -1,190 +1,125 @@
+import { Link } from "react-router-dom";
+import { FaReact, FaCode, FaDatabase } from "react-icons/fa";
+import { SiAxios, SiTypescript } from "react-icons/si";
 import ModuleHeader from "../../components/PageHeader";
-import ModuleSessionCard from "../../components/ModuleSessionCard";
 
 const FrontendHomePage = () => {
+  const iconsSize = 45;
+
   return (
-    <div className="frontend-home-page">
+    <div className="tools-page">
       <ModuleHeader
         lesson={{
           topic: "Frontend",
-          title: "La cara de la web",
+          title: "El rostro de tu web",
         }}
       />
 
-      <div id="modules-section" className="modules-section">
-        <div className="modules-layout">
-          {/* Texto superior */}
-          <div className="modules-text">
-            <h1 className="modules-title center">Módulos</h1>
+      <div className="tools-page-content ">
+        {/* Contenedor del texto introductorio */}
+        <div className="tools-intro-container">
+          <h1 className="hero-title-row ">CONSTRUYE INTERFACES WEB MODERNAS</h1>
 
-            <p className="modules-desc">
-              En este módulo aprenderás a construir interfaces web modernas
-              utilizando React y TypeScript. Desde los fundamentos de los
-              componentes hasta la comunicación con APIs y el manejo de
-              diferentes estrategias de renderizado.
-            </p>
+          <p className="tools-intro-desc ">
+            En este módulo aprenderás los fundamentos necesarios para
+            desarrollar aplicaciones frontend modernas, interactivas y
+            conectadas con servicios backend.
+          </p>
 
-            <p className="modules-desc">
-              El objetivo es que puedas desarrollar aplicaciones frontend
-              interactivas, organizadas y conectadas con un backend.
-            </p>
+          <div className="tools-section-header">
+            <h2 className=" hero-section-title">Desarrollo Frontend</h2>
 
-            <p className="modules-note">
-              <strong>Nota:</strong> Se recomienda seguir los módulos en orden,
-              ya que cada sesión introduce conceptos utilizados en las
-              siguientes.
+            <p className="tools-section-subtitle">
+              Explora las siguientes sesiones para aprender los conceptos
+              fundamentales de React y el desarrollo web.
             </p>
           </div>
+        </div>
 
-          {/* Cards */}
-          <div className="modules-grid">
-            <ModuleSessionCard
-              number="01"
-              title="Fundamentos de React + CSS"
-              description="Introducción a React, JSX, componentes y los fundamentos de CSS para construir interfaces modernas y responsivas."
-              to="/frontend/fundamentos"
-              recommended
-              tags={["React", "JSX", "CSS", "Flexbox", "Grid"]}
-              icon={
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <ellipse
-                    cx="12"
-                    cy="12"
-                    rx="10"
-                    ry="4"
-                    transform="rotate(30 12 12)"
-                  />
-                  <ellipse
-                    cx="12"
-                    cy="12"
-                    rx="10"
-                    ry="4"
-                    transform="rotate(90 12 12)"
-                  />
-                  <ellipse
-                    cx="12"
-                    cy="12"
-                    rx="10"
-                    ry="4"
-                    transform="rotate(150 12 12)"
-                  />
-                  <circle cx="12" cy="12" r="1.5" fill="currentColor" />
-                </svg>
-              }
-            />
+        {/* Cards */}
+        <div className="front-grid hero-section-minibg">
+          {/* 01 — React + CSS */}
+          <Link to="/frontend/fundamentos" className="tool-card ">
+            <div className="tool-card__icon">
+              <FaReact size={iconsSize} />
+            </div>
 
-            <ModuleSessionCard
-              number="02"
-              title="Componentes, Props y State"
-              description="Aprende a construir componentes reutilizables y a gestionar la información y el comportamiento dinámico de una interfaz."
-              to="/frontend/componentes"
-              tags={["Components", "Props", "State", "useState"]}
-              icon={
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="4" y="4" width="16" height="16" rx="2" />
-                  <path d="M9 9h6v6H9z" />
-                  <path d="M9 4v2M15 4v2M9 18v2M15 18v2" />
-                  <path d="M4 9h2M4 15h2M18 9h2M18 15h2" />
-                </svg>
-              }
-            />
+            <h3 className="tool-card__title">React + CSS</h3>
 
-            <ModuleSessionCard
-              number="03"
-              title="Hooks + Web Storage"
-              description="Utiliza Hooks para controlar efectos y estados de la aplicación, y aprende a conservar información en el navegador."
-              to="/frontend/hooks-storage"
-              tags={["useEffect", "Hooks", "localStorage", "sessionStorage"]}
-              icon={
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="4" y="3" width="16" height="18" rx="2" />
-                  <path d="M8 7h8" />
-                  <path d="M8 11h8" />
-                  <path d="M8 15h5" />
-                  <path d="M16 18h.01" />
-                </svg>
-              }
-            />
+            <p className="tool-card__desc">
+              Aprende los fundamentos de React, JSX y CSS para construir
+              interfaces modernas y responsivas.
+            </p>
+          </Link>
 
-            <ModuleSessionCard
-              number="04"
-              title="Router + Axios + APIs"
-              description="Conecta diferentes páginas de una SPA y aprende a consumir APIs REST para comunicar React con el backend."
-              to="/frontend/router-axios"
-              tags={["Router", "Axios", "REST API", "SPA"]}
-              icon={
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="5" cy="12" r="2" />
-                  <circle cx="19" cy="6" r="2" />
-                  <circle cx="19" cy="18" r="2" />
-                  <path d="M7 12h5" />
-                  <path d="M12 12l5-6" />
-                  <path d="M12 12l5 6" />
-                </svg>
-              }
-            />
+          {/* 02 — Components */}
+          <Link to="/frontend/componentes" className="tool-card ">
+            <div className="tool-card__icon">
+              <FaCode size={iconsSize} />
+            </div>
 
-            <ModuleSessionCard
-              number="05"
-              title="TypeScript + UX/UI + Rendering"
-              description="Mejora la calidad de tus aplicaciones con TypeScript, principios de UX/UI y una introducción a SPA, CSR y SSR."
-              to="/frontend/typescript-ux-rendering"
-              tags={["TypeScript", "UX/UI", "SPA", "CSR", "SSR"]}
-              icon={
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <path d="M7 8h10" />
-                  <path d="M7 12h6" />
-                  <path d="M7 16h8" />
-                </svg>
-              }
-            />
-          </div>
+            <h3 className="tool-card__title">Components, Props & State</h3>
+
+            <p className="tool-card__desc">
+              Construye componentes reutilizables y aprende a manejar
+              información y comportamiento dentro de React.
+            </p>
+          </Link>
+
+          {/* 03 — Hooks + Web Storage */}
+          <Link
+            to="/frontend/hooks-storage"
+            className="tool-card about-section"
+          >
+            <div className="tool-card__icon">
+              <FaDatabase size={iconsSize} />
+            </div>
+
+            <h3 className="tool-card__title">Hooks + Web Storage</h3>
+
+            <p className="tool-card__desc">
+              Trabaja con Hooks y aprende a almacenar información utilizando
+              localStorage y sessionStorage.
+            </p>
+          </Link>
+
+          {/* 04 — Router + Axios */}
+          <Link to="/frontend/router-axios" className="tool-card ">
+            <div className="tool-card__icon">
+              <SiAxios size={iconsSize} />
+            </div>
+
+            <h3 className="tool-card__title">Router + Axios + APIs</h3>
+
+            <p className="tool-card__desc">
+              Crea navegación SPA y conecta tu aplicación React con APIs REST
+              mediante Axios.
+            </p>
+          </Link>
+
+          {/* 05 — TypeScript + UX/UI */}
+          <Link
+            to="/frontend/typescript-ux-rendering"
+            className="tool-card about-section"
+          >
+            <div className="tool-card__icon">
+              <SiTypescript size={iconsSize} />
+            </div>
+
+            <h3 className="tool-card__title">TypeScript + UX/UI</h3>
+
+            <p className="tool-card__desc">
+              Mejora tus aplicaciones con TypeScript, principios de UX/UI y
+              conceptos de SPA, CSR y SSR.
+            </p>
+          </Link>
+        </div>
+
+        <div className="tools-recommendation">
+          <p className="tools-recommendation-text">
+            Recomendamos seguir las sesiones en orden para aprovechar mejor el
+            contenido del módulo.
+          </p>
         </div>
       </div>
     </div>

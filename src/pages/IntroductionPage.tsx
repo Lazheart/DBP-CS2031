@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ProgressBar from '../components/ProgressBar'
 import StepSideBar from '../components/StepSideBar'
 import QuizModal from '../components/QuizzModal'
@@ -192,6 +192,38 @@ const SubModuleContent = ({ id }: { id: string, lessonId: string }) => {
                 </article>
             )
 
+        case 'comandos-terminal':
+            return (
+                <article className="class-article">
+                    <h1>Comandos Básicos de Terminal</h1>
+
+                    <h2>¿Qué es la Terminal?</h2>
+                    <p>
+                        La terminal (o línea de comandos) es una interfaz de texto que nos permite interactuar con el sistema operativo. En sistemas basados en Unix (como Linux y macOS) o usando emuladores como Git Bash en Windows, los comandos son muy similares.
+                    </p>
+
+                    <h2>Comandos Esenciales</h2>
+                    <ul className="class-list">
+                        <li><strong>ls:</strong> Lista los archivos y directorios de la ubicación actual (List).</li>
+                        <li><strong>mkdir:</strong> Crea un nuevo directorio o carpeta (Make Directory).</li>
+                        <li><strong>touch:</strong> Crea un archivo vacío o actualiza la fecha de modificación de un archivo existente.</li>
+                        <li><strong>cat:</strong> Muestra el contenido completo de uno o más archivos en la terminal (Concatenate).</li>
+                        <li><strong>nano / pico:</strong> Editores de texto integrados en la terminal. Son fáciles de usar para modificar archivos rápidamente.</li>
+                    </ul>
+
+                    <h2>Ejemplos de Uso</h2>
+                    <div className="class-code-block">
+                        <code>
+                            $ mkdir mi_proyecto{'\n'}
+                            $ touch mi_proyecto/index.js{'\n'}
+                            $ ls mi_proyecto{'\n'}
+                            $ nano mi_proyecto/index.js{'\n'}
+                            $ cat mi_proyecto/index.js
+                        </code>
+                    </div>
+                </article>
+            )
+
         default:
             return null
     }
@@ -227,6 +259,12 @@ const IntroductionPage = () => {
     }))
 
     const isModuleComplete = completedIds.length === introSubModules.length
+
+    useEffect(() => {
+        if (isModuleComplete) {
+            localStorage.setItem('introCompleted', JSON.stringify(true))
+        }
+    }, [isModuleComplete])
     const currentIdx = introSubModules.findIndex((m) => m.id === activeId)
     const hasNext = currentIdx < introSubModules.length - 1
     const hasPrev = currentIdx > 0
