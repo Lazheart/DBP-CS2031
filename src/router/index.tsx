@@ -4,7 +4,7 @@ import HomePage from "../pages/HomePage";
 import CommingSoonPage from "../pages/CommingSoonPage";
 import GitPage from "../pages/tools/GitPage";
 import DockerPage from "../pages/tools/DockerPage";
-import PostmanPage from "../pages/tools/PostmanPage";
+{/* import PostmanPage from "../pages/tools/PostmanPage"; */}
 import ToolsPage from "../pages/tools/ToolsPage";
 import BackendPage from "../pages/backend/BackendPage";
 import FrontendHomePage from "../pages/frontend/FrontendHomePage";
@@ -13,6 +13,7 @@ import IntroductionPage from "../pages/IntroductionPage";
 import GithubPage from "../pages/tools/GithubPage";
 
 import RootLayout from "../components/RootLayout";
+import AxiosPage from "../pages/frontend/AxiosPage";
 
 const router = createBrowserRouter(
   [
@@ -52,6 +53,14 @@ const router = createBrowserRouter(
           element: <FrontendHomePage />,
         },
         {
+          path: "/frontend/axios",
+          element: <AxiosPage />,
+        },
+        {
+          path: "/frontend/axios/",
+          element: <AxiosPage />,
+        },
+        {
           path: "/deployment",
           element: <DeployPage />,
         },
@@ -68,8 +77,8 @@ const router = createBrowserRouter(
           element: <DockerPage />,
         },
         {
-          path: "/tools/postman",
-          element: <PostmanPage />,
+          path: "/tools/postman/",
+          element: <CommingSoonPage />,
         },
         {
           path: "/git",
