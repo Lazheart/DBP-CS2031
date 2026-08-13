@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FaReact, FaCode, FaDatabase } from "react-icons/fa";
 import { SiAxios, SiTypescript } from "react-icons/si";
 import ModuleHeader from "../../components/PageHeader";
+import IntroAdvice from "../../components/IntroAdvice";
 
 const FrontendHomePage = () => {
   const iconsSize = 45;
@@ -14,7 +15,7 @@ const FrontendHomePage = () => {
           title: "El rostro de tu web",
         }}
       />
-
+      <IntroAdvice />
       <div className="tools-page-content ">
         {/* Contenedor del texto introductorio */}
         <div className="tools-intro-container">
