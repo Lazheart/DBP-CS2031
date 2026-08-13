@@ -18,7 +18,10 @@ const FrontendHomePage = () => {
       <div className="tools-page-content ">
         {/* Contenedor del texto introductorio */}
         <div className="tools-intro-container">
-          <h1 className="hero-title-row ">CONSTRUYE INTERFACES WEB MODERNAS</h1>
+          <h1 className="tools-intro-title">
+            CONSTRUYE{" "}
+            <span className="hero-title-gradient">INTERFACES WEB</span> MODERNAS
+          </h1>
 
           <p className="tools-intro-desc ">
             En este módulo aprenderás los fundamentos necesarios para
@@ -39,7 +42,7 @@ const FrontendHomePage = () => {
         {/* Cards */}
         <div className="front-grid hero-section-minibg">
           {/* 01 — React + CSS */}
-          <Link to="/frontend/fundamentos" className="tool-card ">
+          <Link to="/frontend/react-css" className="tool-card ">
             <div className="tool-card__icon">
               <FaReact size={iconsSize} />
             </div>
@@ -53,7 +56,7 @@ const FrontendHomePage = () => {
           </Link>
 
           {/* 02 — Components */}
-          <Link to="/frontend/componentes" className="tool-card ">
+          <Link to="/frontend/components" className="tool-card ">
             <div className="tool-card__icon">
               <FaCode size={iconsSize} />
             </div>
@@ -98,10 +101,7 @@ const FrontendHomePage = () => {
           </Link>
 
           {/* 05 — TypeScript + UX/UI */}
-          <Link
-            to="/frontend/typescript-ux-rendering"
-            className="tool-card about-section"
-          >
+          <Link to="/frontend/TypeScript" className="tool-card about-section">
             <div className="tool-card__icon">
               <SiTypescript size={iconsSize} />
             </div>
