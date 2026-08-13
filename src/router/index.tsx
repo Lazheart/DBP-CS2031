@@ -4,7 +4,7 @@ import HomePage from "../pages/HomePage";
 import CommingSoonPage from "../pages/CommingSoonPage";
 import GitPage from "../pages/tools/GitPage";
 import DockerPage from "../pages/tools/DockerPage";
-import PostmanPage from "../pages/tools/PostmanPage";
+{/* import PostmanPage from "../pages/tools/PostmanPage"; */}
 import ToolsPage from "../pages/tools/ToolsPage";
 import BackendPage from "../pages/backend/BackendPage";
 import FrontendHomePage from "../pages/frontend/FrontendHomePage";
