@@ -52,6 +52,10 @@ const router = createBrowserRouter(
           element: <GithubPage />,
         },
         {
+          path: "/frontend/axios",
+          element: <AxiosPage />,
+        },
+        {
           path: "/backend",
           element: <BackendPage />,
         },
