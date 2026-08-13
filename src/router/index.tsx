@@ -4,7 +4,9 @@ import HomePage from "../pages/HomePage";
 import CommingSoonPage from "../pages/CommingSoonPage";
 import GitPage from "../pages/tools/GitPage";
 import DockerPage from "../pages/tools/DockerPage";
-{/* import PostmanPage from "../pages/tools/PostmanPage"; */}
+{
+  /* import PostmanPage from "../pages/tools/PostmanPage"; */
+}
 import ToolsPage from "../pages/tools/ToolsPage";
 import BackendPage from "../pages/backend/BackendPage";
 import FrontendHomePage from "../pages/frontend/FrontendHomePage";
@@ -13,7 +15,12 @@ import IntroductionPage from "../pages/IntroductionPage";
 import GithubPage from "../pages/tools/GithubPage";
 
 import RootLayout from "../components/RootLayout";
-import AxiosPage from "../pages/frontend/AxiosPage";
+import AxiosPage from "../pages/frontend/RouterAxiosPage";
+import ReactCssPage from "../pages/frontend/ReactCssPage";
+import RouterAxiosPage from "../pages/frontend/RouterAxiosPage";
+import HooksStoragePage from "../pages/frontend/HooksStoragePage";
+import TypescriptUxPage from "../pages/frontend/TypescriptUxPage";
+import ComponentsPage from "../pages/frontend/ComponentsPage";
 
 const router = createBrowserRouter(
   [
@@ -53,13 +60,26 @@ const router = createBrowserRouter(
           element: <FrontendHomePage />,
         },
         {
-          path: "/frontend/axios",
-          element: <AxiosPage />,
+          path: "/frontend/react-css",
+          element: <ReactCssPage />,
         },
         {
-          path: "/frontend/axios/",
-          element: <AxiosPage />,
+          path: "/frontend/components",
+          element: <ComponentsPage />,
         },
+        {
+          path: "/frontend/router-axios",
+          element: <RouterAxiosPage />,
+        },
+        {
+          path: "/frontend/hooks-storage",
+          element: <HooksStoragePage />,
+        },
+        {
+          path: "/frontend/TypeScript",
+          element: <TypescriptUxPage />,
+        },
+
         {
           path: "/deployment",
           element: <DeployPage />,
@@ -108,8 +128,8 @@ const router = createBrowserRouter(
           path: "*",
           element: <NotFoundPage />,
         },
-      ]
-    }
+      ],
+    },
   ],
   {
     basename: "/DBP-CS2031",
