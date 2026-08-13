@@ -13,6 +13,7 @@ import IntroductionPage from "../pages/IntroductionPage";
 import GithubPage from "../pages/tools/GithubPage";
 
 import RootLayout from "../components/RootLayout";
+import AxiosPage from "../pages/frontend/AxiosPage";
 
 const router = createBrowserRouter(
   [
@@ -50,6 +51,14 @@ const router = createBrowserRouter(
         {
           path: "/frontend",
           element: <FrontendHomePage />,
+        },
+        {
+          path: "/frontend/axios",
+          element: <AxiosPage />,
+        },
+        {
+          path: "/frontend/axios/",
+          element: <AxiosPage />,
         },
         {
           path: "/deployment",
