@@ -167,11 +167,10 @@ const HomePage = () => {
                                     Construcción de APIs robustas en spring boot con el ecosistema Java moderno y maven como gestor de dependencias.
                                 </p>
                                 <div className="module-card__tags">
-                                    <span className="module-tag">JWT</span>
-                                    <span className="module-tag">DTO</span>
-                                    <span className="module-tag">SMTP</span>
-                                    <span className="module-tag">CORS</span>
-                                    <span className="module-tag">Swagger-UI</span>
+                                    <span className="module-tag">Authentication</span>
+                                    <span className="module-tag">Security</span>
+                                    <span className="module-tag">Testing & Documentation</span>
+                                    <span className="module-tag">SMTP & WebSockets</span>
                                 </div>
                             </Link>
 
