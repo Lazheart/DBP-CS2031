@@ -1,7 +1,19 @@
+import IntroAdvice from "../../components/IntroAdvice";
+import ModuleHeader from "../../components/PageHeader";
+
 const DeployPage = () => {
+
     return (
-        <div className="workflow-deploy-page">
-            <h1>Workflow Deploy</h1>
+        <div className="deployment-page">
+            <ModuleHeader
+                lesson={{
+                topic: "Deployment",
+                title: "Despliega tu aplicación",
+                }}
+            />
+            <IntroAdvice />
+
+            <div className="deployment-content"></div>
         </div>
     )
 }
