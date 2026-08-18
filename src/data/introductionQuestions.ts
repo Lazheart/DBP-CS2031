@@ -375,4 +375,130 @@ export const introSubModules: SubModule[] = [
             },
         ],
     },
+        {       id: 'que-herramientas-necesito',
+        title: '¿Qué herramientas necesito?',
+        color: '#C94747',
+        questions: [
+            {
+                question: '¿Para qué sirve Git Bash?',
+                options: [
+                    'Para ejecutar comandos y utilizar herramientas como Git desde una terminal',
+                    'Para diseñar interfaces gráficas',
+                    'Para administrar bases de datos',
+                    'Para ejecutar únicamente aplicaciones Java',
+                ],
+                correct: 0,
+                explanation:
+                    'Git Bash proporciona una terminal que permite ejecutar comandos y trabajar con Git desde un entorno de línea de comandos.',
+            },
+            {
+                question: '¿Qué es pnpm?',
+                options: [
+                    'Un editor de código',
+                    'Un sistema operativo',
+                    'Un gestor de paquetes y dependencias para proyectos de JavaScript y TypeScript',
+                    'Una plataforma para alojar repositorios',
+                ],
+                correct: 2,
+                explanation:
+                    'pnpm es un gestor de paquetes utilizado para instalar y administrar dependencias en proyectos de JavaScript y TypeScript.',
+            },
+            {
+                question: '¿Para qué utilizarías un comando como pnpm install?',
+                options: [
+                    'Para eliminar el proyecto',
+                    'Para instalar las dependencias definidas en el proyecto',
+                    'Para crear una cuenta de GitHub',
+                    'Para publicar automáticamente una aplicación',
+                ],
+                correct: 1,
+                explanation:
+                    'El comando pnpm install instala las dependencias necesarias para el proyecto basándose en archivos como package.json y pnpm-lock.yaml.',
+            },
+            {
+                question: '¿Qué es Visual Studio Code?',
+                options: [
+                    'Un navegador web',
+                    'Un editor de código que permite desarrollar y trabajar con diferentes lenguajes y extensiones',
+                    'Un sistema de control de versiones',
+                    'Un servicio exclusivo para almacenar proyectos',
+                ],
+                correct: 1,
+                explanation:
+                    'Visual Studio Code es un editor de código que permite trabajar con múltiples lenguajes de programación y ampliar sus funcionalidades mediante extensiones.',
+            },
+            {
+                question: '¿Qué herramienta utilizarías principalmente para escribir y editar el código de una aplicación?',
+                options: [
+                    'GitHub',
+                    'pnpm',
+                    'Visual Studio Code',
+                    'Git Bash exclusivamente',
+                ],
+                correct: 2,
+                explanation:
+                    'Visual Studio Code es la herramienta utilizada principalmente para escribir, editar y organizar el código de una aplicación.',
+            },
+            {
+                question: '¿Para qué sirve GitHub?',
+                options: [
+                    'Para alojar repositorios y colaborar en proyectos utilizando Git',
+                    'Para reemplazar completamente el editor de código',
+                    'Para instalar dependencias de JavaScript',
+                    'Para ejecutar comandos del sistema operativo',
+                ],
+                correct: 0,
+                explanation:
+                    'GitHub es una plataforma que permite alojar repositorios Git y colaborar con otros desarrolladores mediante herramientas como Pull Requests, Issues y Actions.',
+            },
+            {
+                question: '¿Cuál de las siguientes herramientas permite principalmente alojar un proyecto en la nube y compartirlo con otros desarrolladores?',
+                options: [
+                    'Git Bash',
+                    'pnpm',
+                    'Visual Studio Code',
+                    'GitHub',
+                ],
+                correct: 3,
+                explanation:
+                    'GitHub permite almacenar repositorios en la nube y facilita la colaboración entre desarrolladores.',
+            },
+            {
+                question: '¿Cuál es una combinación correcta de herramientas y sus funciones?',
+                options: [
+                    'pnpm: editor de código | GitHub: terminal',
+                    'Git Bash: terminal | pnpm: gestor de dependencias',
+                    'VS Code: plataforma de repositorios | GitHub: gestor de paquetes',
+                    'GitHub: sistema operativo | Git Bash: base de datos',
+                ],
+                correct: 1,
+                explanation:
+                    'Git Bash se utiliza como terminal para ejecutar comandos y pnpm se encarga de gestionar las dependencias de proyectos de JavaScript y TypeScript.',
+            },
+            {
+                question: '¿Cuál de estas herramientas está más relacionada con la gestión de dependencias de un proyecto?',
+                options: [
+                    'GitHub',
+                    'Visual Studio Code',
+                    'pnpm',
+                    'Git Bash',
+                ],
+                correct: 2,
+                explanation:
+                    'pnpm permite instalar, actualizar y gestionar las dependencias utilizadas por un proyecto.',
+            },
+            {
+                question: '¿Por qué es recomendable instalar estas herramientas antes de comenzar a desarrollar?',
+                options: [
+                    'Porque permiten editar código, gestionar dependencias, utilizar Git y colaborar mediante repositorios',
+                    'Porque reemplazan todos los lenguajes de programación',
+                    'Porque eliminan automáticamente los errores del código',
+                    'Porque permiten desarrollar sin necesidad de aprender ningún concepto',
+                ],
+                correct: 0,
+                explanation:
+                    'Estas herramientas cubren diferentes partes del flujo de desarrollo: escribir código, instalar dependencias, ejecutar comandos y gestionar proyectos mediante repositorios.',
+            },
+]
+    },
 ]

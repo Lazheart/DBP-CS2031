@@ -42,6 +42,44 @@ const SubModuleContent = ({ id }: { id: string, lessonId: string }) => {
                     </p>
                 </article>
             )
+        case 'que-herramientas-necesito':
+            return (
+                <article className="class-article">
+                    <h1>¿Qué herramientas necesito?</h1>
+                    <p>
+                        Para poder seguir este curso necesitarás una serie de herramientas que te ayudarán a
+                        desarrollar aplicaciones web de manera eficiente.
+                        <br />
+                        Estas herramientas son:
+                    </p>
+                    <ul className="class-list">
+                        <li><strong>Gitbash:</strong> Una terminal para correr comandos.</li>
+                        <li><strong>pnpm:</strong> Un gestor de dependencias para JavaScript y Typescript.</li>
+                        <li><strong>VSCode:</strong> Un editor de código.</li>
+                        <li><strong>GitHub:</strong> Una plataforma para alojar código en la nube.</li>
+                    </ul>
+
+                    <p>
+                        Puedes encontrar más información sobre estas herramientas en la página oficial de cada una.
+                    </p>
+
+                    <p>
+                        No te preocupes si no tienes todas las herramientas instaladas, puedes instalarlas
+                        siguiendo las instrucciones de la página oficial de cada una.
+                    </p>
+
+                    <ul className="class-list">
+                        <li><a href="https://git-scm.com/install">Gitbash</a></li>
+                        <li><a href="https://pnpm.io/">pnpm</a></li>
+                        <li><a href="https://code.visualstudio.com/">VSCode</a></li>
+                        <li><a href="https://github.com/">GitHub</a></li>
+                    </ul>   
+
+                    <p>
+                        Adicionalmente puedes encontrar un tutorial de como conectar tu cuenta de github con tu terminal Gitbash <a href="https://github.com/Lazheart/GitTutorial">aquí</a>
+                    </p>
+                </article>
+            )
 
         case 'que-es-framework':
             return (
